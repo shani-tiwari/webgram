@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "slug": "flavor-studio",
+    "name": "Flavor Studio",
+    "category": "Restaurant",
+    "tagline": "A modern restaurant & café template",
+    "description": "Crafted for restaurants, cafés, and food businesses. Features a stunning hero with parallax menu sections, online reservation form, chef spotlight, and a full gallery. Optimized for local SEO with schema markup for restaurants.",
+    "features": [
+      "Online reservation system",
+      "Interactive food menu with categories",
+      "Chef & team spotlight section",
+      "Photo gallery with lightbox",
+      "Google Maps integration",
+      "Customer reviews carousel"
+    ],
+    "techStack": ["Next.js 15", "Tailwind CSS", "Framer Motion", "TypeScript"],
+    "price": "₹4,999",
+    "deliveryDays": 2,
+    "pages": ["Home", "Menu", "About", "Reservations", "Gallery", "Contact"]
+  },
+  {
+    "id": 2,
+    "slug": "apex-saas",
+    "name": "Apex SaaS",
+    "category": "SaaS / Startup",
+    "tagline": "Launch your SaaS product with confidence",
+    "description": "A conversion-focused landing page for SaaS products and tech startups. Includes pricing tables, feature comparison grids, testimonials, FAQ accordion, and an integrated blog. Built with performance and SEO as top priorities.",
+    "features": [
+      "Animated pricing toggle (monthly/yearly)",
+      "Feature comparison table",
+      "Testimonial slider with ratings",
+      "FAQ accordion section",
+      "Blog with MDX support",
+      "Newsletter signup integration"
+    ],
+    "techStack": ["Next.js 15", "Tailwind CSS", "Framer Motion", "TypeScript"],
+    "price": "₹5,999",
+    "deliveryDays": 2,
+    "pages": ["Home", "Features", "Pricing", "Blog", "About", "Contact"]
+  },
+  {
+    "id": 3,
+    "slug": "jewell-portfolio",
+    "name": "Jewell Portfolio",
+    "category": "Portfolio / Agency",
+    "tagline": "Showcase your work, beautifully",
+    "description": "A minimal, elegant portfolio template for designers, developers, and creative agencies. Features smooth page transitions, project case studies with detailed layouts, a filterable work grid, and a blog for thought leadership.",
+    "features": [
+      "Filterable project grid",
+      "Detailed case study pages",
+      "Smooth page transitions",
+      "Client logo marquee",
+      "Integrated blog section",
+      "Dark/light mode toggle"
+    ],
+    "techStack": ["Next.js 15", "Tailwind CSS", "Framer Motion", "TypeScript"],
+    "price": "₹3,999",
+    "deliveryDays": 1,
+    "pages": ["Home", "Work", "About", "Blog", "Contact"]
+  },
+  {
+    "id": 4,
+    "slug": "medica-clinic",
+    "name": "Medica Clinic",
+    "category": "Healthcare",
+    "tagline": "Trusted healthcare, modern experience",
+    "description": "Designed for clinics, hospitals, and healthcare professionals. Features doctor profiles, appointment booking, service descriptions, patient testimonials, and health blog. HIPAA-friendly design patterns with accessibility in mind.",
+    "features": [
+      "Doctor profiles with specializations",
+      "Online appointment booking",
+      "Service & department listing",
+      "Patient testimonial carousel",
+      "Health blog with categories",
+      "Emergency contact bar"
+    ],
+    "techStack": ["Next.js 15", "Tailwind CSS", "Framer Motion", "TypeScript"],
+    "price": "₹5,499",
+    "deliveryDays": 2,
+    "pages": ["Home", "Services", "Doctors", "Blog", "Appointments", "Contact"]
+  }
+]
