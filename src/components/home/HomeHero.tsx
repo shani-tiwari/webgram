@@ -97,7 +97,7 @@ export default function HomeHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <span className="inline-flex items-center gap-2 rounded-full bg-accent-light px-4 py-1.5 text-xs font-semibold text-accent">
+            <span className="inline-flex items-center gap-2 rounded-full bg-accent-light px-4 py-1.5 text-xs font-semibold text-accent border border-accent ">
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
               Next.js + Tailwind CSS + Motion templates
             </span>
@@ -105,25 +105,25 @@ export default function HomeHero() {
             <h1 className="mx-auto mt-6 max-w-4xl text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
               Your website,
               <span className="block text-accent">ready in days</span>
-              not months
+              not months.
             </h1>
 
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-              Browse code-ready, responsive, animated templates. Choose one,
-              personalize it for your brand, and go live in 1-2 days.
+            <p className="mx-auto mt-6 max-w-xl leading-6 text-muted-foreground "> 
+              Browse code-ready, responsive, animated templates. Choose your template,
+              connect with us and go live in 1-2 days.
             </p>
 
             <div className="mt-10 flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center">
               <Link
                 href="/templates"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-7 py-3.5 text-sm font-semibold text-white shadow-sm shadow-accent/20 transition-colors duration-200 hover:bg-accent-hover"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-7 py-3.5 font-semibold text-white shadow-sm border-2 border-accent/40  shadow-accent/20 transition-colors duration-200 hover:bg-accent-hover"
               >
                 Explore Templates
-                <HugeiconsIcon icon={ArrowRight01Icon} size={18} />
+                <HugeiconsIcon className="mt-1 group-hover:translate-x-1 transition-all duration-200" icon={ArrowRight01Icon} size={20} />
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-white px-7 py-3.5 text-sm font-semibold text-foreground transition-colors duration-200 hover:bg-muted"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-white px-7 py-3.5 font-semibold text-foreground transition-colors duration-200 hover:bg-muted"
               >
                 Get in Touch
               </Link>

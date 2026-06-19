@@ -3,7 +3,7 @@ import TemplateCard from "./TemplateCard";
 
 export default function TemplateGrid() {
   return (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 items-center justify-center">
       {templates.map((t, i) => (
         <TemplateCard
           key={t.id}

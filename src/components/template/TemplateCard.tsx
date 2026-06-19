@@ -77,7 +77,8 @@ export default function TemplateCard({
 
           <div className="flex items-center justify-between gap-3">
             <div className="flex min-w-0 items-center gap-3">
-              <span className="text-lg font-bold text-foreground">{price}</span>
+              {/* price only show on templates page */}
+              {/* <span className="text-lg font-bold text-foreground">{price}</span> */} 
               <span className="text-xs text-muted-foreground">
                 {deliveryDays} day{deliveryDays > 1 ? "s" : ""} delivery
               </span>

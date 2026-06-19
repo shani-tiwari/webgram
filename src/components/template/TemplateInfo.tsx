@@ -26,7 +26,7 @@ interface TemplateData {
 
 function TemplateHeroPreview({ name }: { name: string }) {
   return (
-    <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-slate-100 via-white to-blue-50">
+    <div className="relative aspect-16/10 overflow-hidden rounded-2xl border border-border bg-linear-to-br from-slate-100 via-white to-blue-50">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.16),transparent_40%),radial-gradient(circle_at_bottom_left,rgba(14,165,233,0.12),transparent_35%)]" />
       <div className="absolute inset-x-5 top-5 rounded-2xl border border-white/60 bg-white/70 p-3 backdrop-blur">
         <div className="flex items-center gap-2">

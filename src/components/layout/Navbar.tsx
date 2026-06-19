@@ -19,13 +19,13 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/70 bg-white/40 backdrop-blur-sm ">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/70 bg-white/20 backdrop-blur-lg ">
       <nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between pl-6 pr-6 sm:px-6">
         <Link href="/" className="group flex items-center gap-2">
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent shadow-sm shadow-accent/20 transition-transform duration-200 group-hover:scale-105">
             <span className="text-sm font-bold text-white">W</span>
           </div>
-          <span className="text-lg font-bold tracking-tight text-foreground">
+          <span className="text-lg font-bold tracking-tight text-foreground text-shadow-sm">
             Web<span className="text-accent">Gram</span>
           </span>
         </Link>
@@ -41,7 +41,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`relative py-1 text-sm font-medium transition-colors duration-200 ${
+                  className={`relative py-1 font-medium  transition-colors duration-200 ${
                     isActive
                       ? "text-accent"
                       : "text-muted-foreground hover:text-foreground"
@@ -51,7 +51,7 @@ export default function Navbar() {
                   {isActive && (
                     <motion.span
                       layoutId="nav-underline"
-                      className="absolute -bottom-0.5 left-0 right-0 h-0.5 rounded-full bg-accent"
+                      className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 h-1 w-1 rounded-full bg-accent animate-pulse "
                     />
                   )}
                 </Link>
@@ -62,7 +62,7 @@ export default function Navbar() {
 
         <Link
           href="/contact"
-          className="hidden rounded-xl bg-accent px-5 py-2 text-sm font-semibold text-white shadow-sm shadow-accent/20 transition-colors duration-200 hover:bg-accent-hover md:inline-flex"
+          className="hidden rounded-xl bg-accent px-5 py-2 text-sm font-semibold text-white shadow-sm shadow-accent/20 border-2 border-border/40 text-shadow-sm transition-colors duration-200 hover:bg-accent-hover md:inline-flex"
         >
           Get Started
         </Link>
@@ -114,7 +114,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setMobileOpen(false)}
-                className="mt-2 rounded-xl bg-accent px-5 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
+                className="mt-2 rounded-xl bg-accent px-5 py-2.5 text-center text-sm font-semibold text-white border-2 border-border/40 text-shadow-sm transition-colors hover:bg-accent-hover"
               >
                 Get Started
               </Link>
