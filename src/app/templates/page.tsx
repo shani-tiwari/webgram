@@ -5,7 +5,7 @@ import SectionHeading from "@/components/shared/SectionHeading";
 import TemplateGrid from "@/components/template/TemplateGrid";
 
 export const metadata: Metadata = {
-  title: "Templates — WebGram | Browse All Designs",
+  title: "Templates - WebGram | Browse All Designs",
   description:
     "Explore our collection of code-ready, responsive, SEO-optimized Next.js website templates for restaurants, SaaS, portfolios, and more.",
 };
@@ -15,8 +15,8 @@ export default function Templates() {
     <>
       <Navbar />
 
-      <main className="flex-1 pt-24 pb-24">
-        <div className="max-w-6xl mx-auto px-6">
+      <main className="flex-1 bg-muted/30 pt-24 pb-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <SectionHeading
             label="Browse All"
             title="Website Templates"

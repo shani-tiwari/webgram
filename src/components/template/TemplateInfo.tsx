@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { HugeiconsIcon } from "@hugeicons/react";
@@ -25,63 +24,82 @@ interface TemplateData {
   pages: string[];
 }
 
+function TemplateHeroPreview({ name }: { name: string }) {
+  return (
+    <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-slate-100 via-white to-blue-50">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.16),transparent_40%),radial-gradient(circle_at_bottom_left,rgba(14,165,233,0.12),transparent_35%)]" />
+      <div className="absolute inset-x-5 top-5 rounded-2xl border border-white/60 bg-white/70 p-3 backdrop-blur">
+        <div className="flex items-center gap-2">
+          <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
+          <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
+          <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+          <span className="ml-2 text-xs font-medium text-slate-500">{name}</span>
+        </div>
+      </div>
+      <div className="absolute inset-x-5 bottom-5 grid gap-3 rounded-2xl border border-white/70 bg-white/75 p-4 shadow-lg shadow-blue-950/5 backdrop-blur-sm sm:grid-cols-[1.4fr_0.9fr]">
+        <div className="space-y-3">
+          <div className="h-3 w-1/3 rounded-full bg-slate-200" />
+          <div className="h-10 w-5/6 rounded-2xl bg-slate-200/80" />
+          <div className="h-3 w-2/3 rounded-full bg-slate-200" />
+          <div className="h-3 w-3/4 rounded-full bg-slate-200" />
+        </div>
+        <div className="rounded-2xl bg-accent-light p-4">
+          <div className="mb-3 h-24 rounded-xl bg-white/80" />
+          <div className="h-3 w-4/5 rounded-full bg-white/80" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function TemplateInfo({ data }: { data: TemplateData }) {
   return (
-    <div className="max-w-6xl mx-auto px-6">
-      {/* Breadcrumb */}
+    <div className="mx-auto max-w-6xl px-4 sm:px-6">
       <motion.nav
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4 }}
-        className="flex items-center gap-2 text-sm text-muted-foreground mb-8 pt-24"
+        className="mb-8 flex items-center gap-2 pt-24 text-sm text-muted-foreground"
       >
-        <Link href="/templates" className="hover:text-foreground transition-colors">
+        <Link href="/templates" className="transition-colors hover:text-foreground">
           Templates
         </Link>
         <span>/</span>
-        <span className="text-foreground font-medium">{data.name}</span>
+        <span className="font-medium text-foreground">{data.name}</span>
       </motion.nav>
 
-      {/* Hero */}
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 mb-20">
-        {/* Preview Image */}
+      <div className="mb-20 grid grid-cols-1 gap-10 lg:grid-cols-5">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="lg:col-span-3 relative aspect-16/10 bg-muted rounded-2xl overflow-hidden border border-border"
+          className="lg:col-span-3"
         >
-          <Image
-            src="#"
-            alt={`${data.name} template preview`}
-            fill
-            className="object-cover"
-            unoptimized
-          />
+          <TemplateHeroPreview name={data.name} />
         </motion.div>
 
-        {/* Info */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="lg:col-span-2 flex flex-col"
         >
-          <span className="text-xs font-semibold uppercase tracking-widest text-accent mb-2">
+          <span className="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-accent">
             {data.category}
           </span>
-          <h1 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight mb-3">
+          <h1 className="mb-3 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             {data.name}
           </h1>
-          <p className="text-muted-foreground leading-relaxed mb-6">
+          <p className="mb-6 leading-relaxed text-muted-foreground">
             {data.description}
           </p>
 
-          {/* Meta */}
-          <div className="flex items-center gap-6 mb-6">
+          <div className="mb-6 flex flex-wrap items-center gap-6">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <HugeiconsIcon icon={Clock01Icon} size={16} />
-              <span>{data.deliveryDays} day{data.deliveryDays > 1 ? "s" : ""} delivery</span>
+              <span>
+                {data.deliveryDays} day{data.deliveryDays > 1 ? "s" : ""} delivery
+              </span>
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <HugeiconsIcon icon={CodeIcon} size={16} />
@@ -89,16 +107,14 @@ export default function TemplateInfo({ data }: { data: TemplateData }) {
             </div>
           </div>
 
-          {/* Price */}
           <div className="mb-6">
             <span className="text-3xl font-bold text-foreground">{data.price}</span>
-            <span className="text-sm text-muted-foreground ml-2">one-time</span>
+            <span className="ml-2 text-sm text-muted-foreground">one-time</span>
           </div>
 
-          {/* CTA */}
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent text-white font-semibold rounded-xl hover:bg-accent-hover transition-colors duration-200"
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-6 py-3 font-semibold text-white transition-colors duration-200 hover:bg-accent-hover"
           >
             Get This Template
             <HugeiconsIcon icon={ArrowRight01Icon} size={18} />
@@ -106,16 +122,14 @@ export default function TemplateInfo({ data }: { data: TemplateData }) {
         </motion.div>
       </div>
 
-      {/* Details Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-20">
-        {/* Features */}
+      <div className="mb-20 grid grid-cols-1 gap-10 md:grid-cols-2">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-xl font-bold text-foreground mb-5">Key Features</h2>
+          <h2 className="mb-5 text-xl font-bold text-foreground">Key Features</h2>
           <ul className="space-y-3">
             {data.features.map((f) => (
               <li key={f} className="flex items-start gap-3">
@@ -128,31 +142,30 @@ export default function TemplateInfo({ data }: { data: TemplateData }) {
           </ul>
         </motion.div>
 
-        {/* Tech + Pages */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <h2 className="text-xl font-bold text-foreground mb-5">Tech Stack</h2>
-          <div className="flex flex-wrap gap-2 mb-8">
+          <h2 className="mb-5 text-xl font-bold text-foreground">Tech Stack</h2>
+          <div className="mb-8 flex flex-wrap gap-2">
             {data.techStack.map((t) => (
               <span
                 key={t}
-                className="px-3 py-1.5 bg-muted text-xs font-medium text-foreground rounded-lg border border-border"
+                className="rounded-lg border border-border bg-muted px-3 py-1.5 text-xs font-medium text-foreground"
               >
                 {t}
               </span>
             ))}
           </div>
 
-          <h2 className="text-xl font-bold text-foreground mb-5">Pages Included</h2>
+          <h2 className="mb-5 text-xl font-bold text-foreground">Pages Included</h2>
           <div className="flex flex-wrap gap-2">
             {data.pages.map((p) => (
               <span
                 key={p}
-                className="px-3 py-1.5 bg-accent-light text-xs font-medium text-accent rounded-lg"
+                className="rounded-lg bg-accent-light px-3 py-1.5 text-xs font-medium text-accent"
               >
                 {p}
               </span>

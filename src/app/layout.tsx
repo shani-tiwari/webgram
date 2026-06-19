@@ -1,12 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-});
 
 export const metadata: Metadata = {
   title: "WebGram — Code-Ready Website Templates | Go Live in 1–2 Days",
@@ -28,8 +21,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} antialiased`}>
-      <body className="min-h-screen flex flex-col font-sans">{children}</body>
+    <html lang="en" className="h-full w-full antialiased">
+      <body className="min-h-screen w-full flex flex-col bg-background font-sans text-foreground overflow-x-hidden">
+        {children}
+      </body>
     </html>
   );
 }

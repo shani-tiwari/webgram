@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 :root {
   --background: #ffffff;
@@ -21,14 +20,14 @@
   --color-accent: var(--accent-blue);
   --color-accent-hover: var(--accent-blue-hover);
   --color-accent-light: var(--accent-blue-light);
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: system-ui, sans-serif;
 }
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 html {
   scroll-behavior: smooth;
@@ -37,7 +36,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

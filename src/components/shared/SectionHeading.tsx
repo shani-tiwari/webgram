@@ -24,15 +24,15 @@ export default function SectionHeading({
       className={`mb-12 ${center ? "text-center" : ""}`}
     >
       {label && (
-        <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent mb-3 px-3 py-1 bg-accent-light rounded-full">
+        <span className="mb-3 inline-flex rounded-full bg-accent-light px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
           {label}
         </span>
       )}
-      <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight">
+      <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
         {title}
       </h2>
       {description && (
-        <p className="mt-4 text-muted-foreground max-w-2xl leading-relaxed mx-auto">
+        <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-muted-foreground">
           {description}
         </p>
       )}
