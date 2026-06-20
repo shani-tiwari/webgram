@@ -62,9 +62,9 @@ export default function Navbar() {
 
         <Link
           href="/contact"
-          className="hidden rounded-xl bg-accent px-5 py-2 text-sm font-semibold text-white shadow-sm shadow-accent/20 border-2 border-border/40 text-shadow-sm transition-colors duration-200 hover:bg-accent-hover md:inline-flex"
+          className="hidden rounded-xl bg-accent px-5 py-2 text-sm font-semibold text-white shadow-sm shadow-accent/20 border-2 border-white/40 text-shadow-sm transition-colors duration-200 hover:bg-accent-hover md:inline-flex"
         >
-          Get Started
+          Get Started 🚀
         </Link>
 
         <button

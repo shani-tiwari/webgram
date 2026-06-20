@@ -3,86 +3,40 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowRight01Icon } from "@hugeicons/core-free-icons";
+import { SearchSquareIcon } from "@hugeicons/core-free-icons";
 
 function HeroPreview() {
   return (
-    <div className="relative mx-auto max-w-4xl">
+    <div className="relative mx-auto max-w-fit">
       <div className="absolute -inset-4 -z-10 rounded-4xl bg-accent/10 blur-3xl" />
-      <div className="overflow-hidden rounded-4xl border border-border bg-white shadow-2xl shadow-black/5">
-        <div className="flex items-center gap-2 border-b border-border/60 bg-muted/60 px-4 py-3">
+
+        {/* <div className="flex items-center gap-2 border-b border-border/60 bg-muted/60 px-6 py-3">
           <span className="h-3 w-3 rounded-full bg-red-400" />
           <span className="h-3 w-3 rounded-full bg-amber-400" />
           <span className="h-3 w-3 rounded-full bg-emerald-400" />
           <span className="ml-2 text-xs font-medium text-muted-foreground">
             WebGram preview
           </span>
-        </div>
-        <div className="grid gap-0 lg:grid-cols-[1.15fr_0.85fr]">
-          <div className="relative min-h-[280px] bg-linear-to-br from-slate-50 via-white to-blue-50 p-6 sm:p-8">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.12),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(14,165,233,0.1),transparent_32%)]" />
-            <div className="relative flex h-full flex-col justify-between">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">
-                  Launch faster
-                </p>
-                <h3 className="mt-3 max-w-sm text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-                  Premium templates that feel custom from day one.
-                </h3>
-              </div>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-foreground shadow-sm">
-                  Responsive
-                </span>
-                <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-foreground shadow-sm">
-                  SEO ready
-                </span>
-                <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-foreground shadow-sm">
-                  Motion polished
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="grid gap-4 bg-white p-6 sm:p-8">
-            <div className="rounded-2xl border border-border bg-muted p-4">
-              <div className="mb-3 h-3 w-20 rounded-full bg-slate-200" />
-              <div className="space-y-2">
-                <div className="h-2 w-5/6 rounded-full bg-slate-200" />
-                <div className="h-2 w-4/6 rounded-full bg-slate-200" />
-                <div className="h-2 w-3/4 rounded-full bg-slate-200" />
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="rounded-2xl bg-accent-light p-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-                  Speed
-                </p>
-                <p className="mt-2 text-2xl font-bold text-foreground">1-2d</p>
-              </div>
-              <div className="rounded-2xl bg-foreground p-4 text-white">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/60">
-                  Quality
-                </p>
-                <p className="mt-2 text-2xl font-bold">100%</p>
-              </div>
-            </div>
-            <div className="rounded-2xl border border-border p-4">
-              <div className="mb-3 flex items-center justify-between">
-                <span className="text-sm font-semibold text-foreground">Built for</span>
-                <span className="text-xs font-medium text-muted-foreground">
-                  modern teams
-                </span>
-              </div>
-              <div className="space-y-3">
-                <div className="h-2 w-full rounded-full bg-slate-200" />
-                <div className="h-2 w-5/6 rounded-full bg-slate-200" />
-                <div className="h-2 w-2/3 rounded-full bg-slate-200" />
-              </div>
-            </div>
-          </div>
-        </div>
+        </div> */}
+
+        <div className="relative">
+  {/* Blur Glow */}
+  <div className="absolute inset-0 -z-10 rounded-[32px] bg-radial from-white/60 via-white/20 to-transparent blur-3xl scale-110" />
+
+  <div className="h-full w-full bg-white/50 p-2 rounded-2xl overflow-hidden">
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      className="w-full h-full -mb-2 max-w-xl mx-auto rounded-2xl object-cover border-2 border-border shadow-[8px_8px_24px_#00000040]"
+    >
+      <source src="/hero-video.mp4" type="video/mp4" />
+    </video>
+  </div>
+</div>
+
       </div>
-    </div>
   );
 }
 
@@ -90,25 +44,41 @@ export default function HomeHero() {
   return (
     <section className="relative overflow-hidden pt-28 sm:pt-32">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.08),transparent_34%),linear-gradient(to_bottom,rgba(245,247,255,0.9),transparent_55%)]" />
-      <div className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
-        <div className="text-center">
+      <div className="relative flex flex-col border border-gray-100 rounded-xl items-center mx-auto max-w-fit px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
+         <span className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap flex items-center gap-2 rounded-full bg-white/50 backdrop-blur-md px-4 py-1.5 text-xs font-semibold text-green-800 border border-green-500/40 ">
+              <span className="h-1.5 w-1.5  animate-pulse rounded-full bg-green-500" />
+              People search on Google not Instagram. 
+          </span>
+        <div className="flex flex-col items-center text-center md:flex-row">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <span className="inline-flex items-center gap-2 rounded-full bg-accent-light px-4 py-1.5 text-xs font-semibold text-accent border border-accent ">
-              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
-              Next.js + Tailwind CSS + Motion templates
-            </span>
+           
 
             <h1 className="mx-auto mt-6 max-w-4xl text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
               Your website,
-              <span className="block text-accent">ready in days</span>
+              <span className="block text-accent">ready in days
+                <svg className="mx-auto w-3/5 md:w-full" width="460" height="15" viewBox="0 0 460 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_d_1_4)">
+                    <path d="M5 11C18.0316 11 31.0633 11 77.1745 9.73077C123.286 8.46154 202.082 5.92307 245.704 4.23461C289.327 2.54615 295.388 1.78461 323.816 1.39231C352.244 1 402.855 1 455 1" stroke="#2563EB" strokeWidth="2" strokeLinecap="round"/>
+                  </g>
+                  <defs>
+                  <filter id="filter0_d_1_4" x="0" y="0" width="460" height="20" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                    <feOffset dy="4"/> 
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_4" result="shape"/>
+                  </filter>
+                  </defs>
+                </svg>
+
+
+              </span>
               not months.
             </h1>
 
-            <p className="mx-auto mt-6 max-w-xl leading-6 text-muted-foreground "> 
+            <p className="mx-auto mt-6 max-w-xl leading-6 text-foreground "> 
               Browse code-ready, responsive, animated templates. Choose your template,
               connect with us and go live in 1-2 days.
             </p>
@@ -116,16 +86,17 @@ export default function HomeHero() {
             <div className="mt-10 flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center">
               <Link
                 href="/templates"
-                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-7 py-3.5 font-semibold text-white shadow-sm border-2 border-accent/40  shadow-accent/20 transition-colors duration-200 hover:bg-accent-hover"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-7 py-3.5 font-semibold text-white shadow-sm border-2 border-white/80  shadow-accent/20 transition-colors duration-200 hover:bg-accent-hover"
               >
                 Explore Templates
-                <HugeiconsIcon className="mt-1 group-hover:translate-x-1 transition-all duration-200" icon={ArrowRight01Icon} size={20} />
+                <HugeiconsIcon className="mt-1 group-hover:scale-103 transition-all duration-200" icon={SearchSquareIcon} size={20} />
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-white px-7 py-3.5 font-semibold text-foreground transition-colors duration-200 hover:bg-muted"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-white px-7 py-3.5 font-semibold text-foreground transition-colors duration-200 hover:bg-muted"
               >
-                Get in Touch
+                Get in Touch 🫱🏼‍🫲🏻
+                {/* <HugeiconsIcon className="mt-1 group-hover:scale-103 transition-all duration-200" icon={TouchInteraction04Icon} size={20} /> */}
               </Link>
             </div>
           </motion.div>
