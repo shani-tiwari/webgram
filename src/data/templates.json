@@ -36,7 +36,8 @@
     "techStack": ["Next.js 15", "Tailwind CSS", "Framer Motion", "TypeScript"],
     "price": "₹5,999",
     "deliveryDays": 2,
-    "pages": ["Home", "Features", "Pricing", "Blog", "About", "Contact"]
+    "pages": ["Home", "Features", "Pricing", "Blog", "About", "Contact"],
+    "images": [""]
   },
   {
     "id": 3,
@@ -56,7 +57,9 @@
     "techStack": ["Next.js 15", "Tailwind CSS", "Framer Motion", "TypeScript"],
     "price": "₹3,999",
     "deliveryDays": 1,
-    "pages": ["Home", "Work", "About", "Blog", "Contact"]
+    "pages": ["Home", "Work", "About", "Blog", "Contact"],
+        "images": [""]
+
   },
   {
     "id": 4,
@@ -76,6 +79,8 @@
     "techStack": ["Next.js 15", "Tailwind CSS", "Framer Motion", "TypeScript"],
     "price": "₹5,499",
     "deliveryDays": 2,
-    "pages": ["Home", "Services", "Doctors", "Blog", "Appointments", "Contact"]
+    "pages": ["Home", "Services", "Doctors", "Blog", "Appointments", "Contact"],
+        "images": [""]
+
   }
 ]

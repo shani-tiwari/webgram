@@ -104,7 +104,8 @@ export default function TemplateInfo({ data }: { data: TemplateData }) {
             </div>
 
             <Link
-              href="/contact"
+              href="https://cafe-bakery-c.vercel.app/"
+              target="_blank"
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent-light px-6 py-3 mb-4 font-semibold text-black/80 transition-colors duration-200 hover:bg-accent-light/80"
             >
               Live Preview

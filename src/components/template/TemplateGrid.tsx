@@ -14,6 +14,7 @@ export default function TemplateGrid() {
           price={t.price}
           deliveryDays={t.deliveryDays}
           index={i}
+          images={t.images} 
         />
       ))}
     </div>
