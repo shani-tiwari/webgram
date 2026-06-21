@@ -14,7 +14,7 @@ function HeroPreview() {
           {/* Blur Glow */}
           <div className="absolute inset-0 -z-10 rounded-[32px] bg-radial from-white/60 via-white/20 to-transparent blur-3xl scale-110" />
 
-        <div className="h-full min-h-[300px] min-w-[400px] w-full bg-white/50 p-2 rounded-2xl overflow-hidden">
+        <div className="h-full min-h-[300px] min-w-[320px] md:min-w-[400px] w-full bg-white/50 p-2 rounded-2xl overflow-hidden">
           <video
             autoPlay
             loop
@@ -35,11 +35,13 @@ export default function HomeHero() {
   return (
     <section className="relative overflow-hidden pt-28 sm:pt-32">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.08),transparent_34%),linear-gradient(to_bottom,rgba(245,247,255,0.9),transparent_55%)]" />
-      <div className="relative flex flex-col border border-green-100 rounded-xl items-center mx-auto max-w-fit px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
-         <span className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap flex items-center gap-2 rounded-full bg-white/50 backdrop-blur-md px-4 py-1.5 text-xs font-semibold text-green-800 border border-green-500/40 ">
-              <span className="h-1.5 w-1.5  animate-pulse rounded-full bg-green-500" />
+      <div className="relative flex flex-col border border-green-100 rounded-xl rounded-t-4xl items-center mx-auto max-w-fit px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
+
+         <span className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap flex items-center gap-2 rounded-xl rounded-t-4xl bg-white/50 backdrop-blur-md px-4 py-1.5 text-sm font-semibold text-green-800 border border-green-500/40 ">
+              <span className="h-1.5 w-1.5  animate-pulse rounded-full  bg-green-500" />
               People search on Google not Instagram. 
           </span>
+
         <div className="flex flex-col items-center py-6 gap-6 text-center md:flex-row ">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -77,14 +79,14 @@ export default function HomeHero() {
             <div className="mt-10 flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center">
               <Link
                 href="/templates"
-                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-7 py-3.5 font-semibold text-white shadow-sm border-2 border-white/80  shadow-accent/20 transition-colors duration-200 hover:bg-accent-hover"
+                className="group w-fit mx-auto inline-flex items-center justify-center gap-2 rounded-xl rounded-t-4xl bg-accent px-7 py-3.5 font-semibold text-white shadow-sm border-2 border-white/80  shadow-accent/20 transition-colors duration-200 hover:bg-accent-hover"
               >
                 Explore Templates
                 <HugeiconsIcon className="mt-1 group-hover:scale-103 transition-all duration-200" icon={SearchSquareIcon} size={20} />
               </Link>
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-white px-7 py-3.5 font-semibold text-foreground transition-colors duration-200 hover:bg-muted"
+                className="group w-fit mx-auto inline-flex items-center justify-center gap-2 rounded-xl rounded-t-4xl border border-border bg-white px-7 py-3.5 font-semibold text-foreground transition-colors duration-200 hover:bg-muted"
               >
                 Get in Touch 🫱🏼‍🫲🏻
                 {/* <HugeiconsIcon className="mt-1 group-hover:scale-103 transition-all duration-200" icon={TouchInteraction04Icon} size={20} /> */}

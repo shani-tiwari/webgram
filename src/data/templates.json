@@ -3,7 +3,7 @@
     "id": 1,
     "slug": "elixir-cafe",
     "name": "Elixir Cafe",
-    "category": "Cafe",
+    "category": ["Cafe", "Restaurent", "Bakery"],
     "price": "₹3,999",
     "deliveryDays": 2,
     "tagline": "A modern café template",
@@ -23,7 +23,7 @@
     "id": 2,
     "slug": "hotel",
     "name": "ELYRA HOTELS",
-    "category": "Hotel",
+    "category": ["Hotel","Resort","Travel","Real Estate"],
     "tagline": "Book Your Stay",
     "description": "A conversion-focused landing page for hotels, resorts, and hospitality businesses. Features an immersive hero with booking widget, room showcases with galleries, guest reviews, local attractions guide, and a seamless reservation flow. Optimized for travel SEO with schema markup for hotels.",
     "features": [
@@ -43,7 +43,7 @@
     "id": 3,
     "slug": "yoga",
     "name": "FlexiZen",
-    "category": "Yoga ",
+    "category": ["Yoga", "Fitness", "Health", "Personal Portfolio"],
     "tagline": "A modern Yoga template",
     "description": "A minimal, elegant  template for designers, developers, and creative agencies. Features smooth page transitions, project case studies with detailed layouts, a filterable work grid, and a blog for thought leadership.",
     "features": [
@@ -65,7 +65,7 @@
     "id": 4,
     "slug": "agency",
     "name": "Web Design Agency",
-    "category": "Agency",
+    "category": ["Agency", "Saas", "Digital Service", "Startup"],
     "tagline": "Modern Web Design Agency",
     "description": "Designed for digital agencies, and creative professionals. Features doctor profiles, appointment booking, service descriptions, patient testimonials, and health blog. HIPAA-friendly design patterns with accessibility in mind.",
     "features": [

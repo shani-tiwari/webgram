@@ -9,10 +9,10 @@ import {
 
 const footerLinks = {
   Templates: [
-    { label: "Restaurant", href: "/templates/flavor-studio" },
-    { label: "SaaS", href: "/templates/apex-saas" },
-    { label: "Portfolio", href: "/templates/jewell-portfolio" },
-    { label: "Healthcare", href: "/templates/medica-clinic" },
+    { label: "Restaurant", href: "/templates/elixir-cafe" },
+    { label: "Agency", href: "/templates/agency" },
+    { label: "Portfolio", href: "/templates/yoga" },
+    { label: "Hotel", href: "/templates/hotel" },
   ],
   Company: [
     { label: "About", href: "/about" },
@@ -46,14 +46,14 @@ export default function Footer() {
               Code-ready, responsive website templates. Pick a design,
               customize it, and go live in 1-2 days.
             </p>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 border-b w-fit border-accent-light pb-3">
               {socials.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
                   target="_blank"
-                  className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/20 shadow-md bg-white/10 transition-colors duration-200 hover:bg-accent"
+                  className="flex h-10 w-10 items-center justify-center rounded-lg rounded-t-2xl border border-white/20 shadow-md bg-white/10 transition-colors duration-200 hover:bg-accent"
                 >
                   <HugeiconsIcon icon={social.icon} size={22} color="white" className="text-shadow-sm" />
                 </a>
@@ -93,11 +93,11 @@ export default function Footer() {
                 type="email"
                 name="email"
                 placeholder="your@email.com"
-                className="min-w-0 flex-1 rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none"
+                className="min-w-0 flex-1 rounded-lg rounded-t-xl border border-white/10 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none"
               />
               <button
                 type="submit"
-                className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
+                className="rounded-lg rounded-t-4xl bg-accent px-4 py-2 text-sm font-semibold border border-accent-light text-white transition-colors hover:bg-accent-hover"
               >
                 Join
               </button>

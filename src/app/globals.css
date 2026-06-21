@@ -22,13 +22,6 @@
   --color-accent-light: var(--accent-blue-light);
   --font-sans: system-ui, sans-serif;
 }
-
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
-
 html {
   scroll-behavior: smooth;
 }
@@ -45,6 +38,7 @@ body {
   background-color: var(--accent-blue-light);
   color: #1e1b1b;
 }
+
 
 /* Scrollbar */
 ::-webkit-scrollbar {

@@ -17,7 +17,7 @@ interface TemplateData {
   id: number;
   slug: string;
   name: string;
-  category: string;
+  category: string[];
   tagline: string;
   description: string;
   features: string[];
@@ -86,9 +86,9 @@ export default function TemplateInfo({ data }: { data: TemplateData }) {
           className=" flex flex-col md:flex-row w-full md:gap-20"
         >
           <div className="flex flex-col gap-2  w-full max-w-lg">
-            <span className="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-accent">
-              {data.category}
-            </span>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.17em] text-accent bg-accent-light px-6 py-2 rounded-xl rounded-tr-4xl w-fit border border-accent/50">
+                {data.category.join(" / ")}
+              </p>
             <h1 className="mb-3 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
               {data.name}
             </h1>
@@ -97,7 +97,7 @@ export default function TemplateInfo({ data }: { data: TemplateData }) {
             </p>
           </div>
 
-          <div className="pb-10 border-b border-border w-full flex flex-col items-start justify-center">
+          <div className="pb-10 border-b border-border w-full flex flex-col md:items-start justify-center">
 
           
             <div className="mb-6">
@@ -108,14 +108,14 @@ export default function TemplateInfo({ data }: { data: TemplateData }) {
             <Link
               href={data.link}
               target="_blank"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent-light px-6 py-3 mb-4 font-semibold text-black/80 transition-colors duration-200 hover:bg-accent-light/80"
+              className="inline-flex items-center justify-center gap-2 rounded-xl rounded-t-4xl bg-accent-light px-6 py-3 mb-4 border border-accent/60 font-semibold text-black/80 transition-colors duration-200 hover:bg-accent-light/80"
             >
               Live Preview
               <HugeiconsIcon icon={Eye} size={18} />
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-6 py-3 font-semibold text-white transition-colors duration-200 hover:bg-accent-hover"
+              className="inline-flex items-center justify-center gap-2 rounded-xl rounded-t-4xl bg-accent px-6 py-3 font-semibold text-white transition-colors duration-200 hover:bg-accent-hover"
             >
               Get This Template
               <HugeiconsIcon icon={ArrowRight01Icon} size={18} />
@@ -170,7 +170,7 @@ export default function TemplateInfo({ data }: { data: TemplateData }) {
             {data.techStack.map((t) => (
               <span
                 key={t}
-                className="rounded-lg border border-border bg-muted px-3 py-1.5 text-xs font-medium text-foreground"
+                className="rounded-lg rounded-t-3xl border border-border bg-muted px-3 py-1.5 text-xs font-medium text-foreground"
               >
                 {t}
               </span>
@@ -182,7 +182,7 @@ export default function TemplateInfo({ data }: { data: TemplateData }) {
             {data.pages.map((p) => (
               <span
                 key={p}
-                className="rounded-lg bg-accent-light px-3 py-1.5 text-xs font-medium text-accent"
+                className="rounded-lg rounded-t-3xl bg-accent-light px-3 py-1.5 text-xs font-medium text-accent"
               >
                 {p}
               </span>

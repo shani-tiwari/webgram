@@ -17,9 +17,9 @@ export default function Home() {
         <HomeTemplates />
         <HomeFeatures />
         <HomeCTA />
+        <Footer />
       </main>
 
-      <Footer />
     </>
   );
 }

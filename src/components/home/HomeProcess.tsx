@@ -6,7 +6,7 @@ import { homeSteps } from "./home-content";
 
 export default function HomeProcess() {
   return (
-    <section className="bg-muted/60 py-20 sm:py-24">
+    <section className="snap-y-mandatory bg-muted/60 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="Process"
@@ -23,8 +23,8 @@ export default function HomeProcess() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.12 }}
-              style={{top: `calc(${i + 0.3} * 35%)`}}
-              className="sticky text-black/80 rounded-2xl border-2 border-slate-400/50 p-4 shadow-sm shadow-black/5 bg-white/80 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              // style={{top: `calc(${i + 0.3} * 35%)`}}
+              className=" text-black/80 rounded-2xl rounded-tr-[6rem] border-2 border-slate-400/50 p-6 shadow-sm shadow-black/5 bg-white/80 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
                 <span className={`inline-flex hover:bg-accent-light items-center text-2xl font-bold  px-2.5 py-1 border-2 border-black/20 rounded-md mb-5`}>
                   {step.num}

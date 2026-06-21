@@ -14,7 +14,7 @@ export default function HomeCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="relative overflow-hidden rounded-3xl bg-foreground/90 px-6 py-12 text-center border-2 border-slate-400/50 text-white sm:px-10 sm:py-16 md:px-16"
+          className="relative overflow-hidden rounded-[5rem] bg-foreground/90 px-6 py-12 text-center border-2 border-slate-400/50 text-white sm:px-10 sm:py-16 md:px-16"
         >
           <div className="absolute right-0 top-0 h-64 w-64 -translate-y-1/2 translate-x-1/2 rounded-full bg-accent/10 blur-3xl" />
 
@@ -27,7 +27,7 @@ export default function HomeCTA() {
           </p>
           <Link
             href="/contact"
-            className="relative inline-flex items-center gap-2 rounded-xl bg-accent px-7 py-3.5 text-sm font-semibold text-white border border-white/40 transition-colors hover:bg-accent-hover"
+            className="relative inline-flex items-center gap-2 rounded-xl rounded-t-4xl  bg-accent px-7 py-3.5 text-sm font-semibold text-white border border-white/40 transition-colors hover:bg-accent-hover"
           >
             Start Your Project
             <HugeiconsIcon icon={ArrowRight01Icon} size={18} />
