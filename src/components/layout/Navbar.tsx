@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/templates", label: "Templates" },
   { href: "/about", label: "About" },
+  { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -114,7 +115,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setMobileOpen(false)}
-                className="mt-2 rounded-xl bg-accent px-5 py-2.5 text-center text-sm font-semibold text-white border-2 border-border/40 text-shadow-sm transition-colors hover:bg-accent-hover"
+                className="mt-2 rounded-xl rounded-t-3xl bg-accent px-5 py-2.5 text-center text-sm font-semibold text-white border-2 border-border/40 text-shadow-sm transition-colors hover:bg-accent-hover"
               >
                 Get Started
               </Link>
