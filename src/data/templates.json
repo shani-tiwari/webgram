@@ -4,6 +4,8 @@
     "slug": "flavor-studio",
     "name": "Flavor Studio",
     "category": "Restaurant",
+    "price": "₹4,999",
+    "deliveryDays": 2,
     "tagline": "A modern restaurant & café template",
     "description": "Crafted for restaurants, cafés, and food businesses. Features a stunning hero with parallax menu sections, online reservation form, chef spotlight, and a full gallery. Optimized for local SEO with schema markup for restaurants.",
     "features": [
@@ -14,10 +16,8 @@
       "Google Maps integration",
       "Customer reviews carousel"
     ],
-    "techStack": ["Next.js 15", "Tailwind CSS", "Framer Motion", "TypeScript"],
-    "price": "₹4,999",
-    "deliveryDays": 2,
-    "pages": ["Home", "Menu", "About", "Reservations", "Gallery", "Contact"]
+    "pages": ["Home", "Menu", "About", "Reservations", "Gallery", "Contact"],
+    "techStack": ["Next.js 15", "Tailwind CSS", "Framer Motion", "TypeScript"]
   },
   {
     "id": 2,

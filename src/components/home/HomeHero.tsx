@@ -44,12 +44,12 @@ export default function HomeHero() {
   return (
     <section className="relative overflow-hidden pt-28 sm:pt-32">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.08),transparent_34%),linear-gradient(to_bottom,rgba(245,247,255,0.9),transparent_55%)]" />
-      <div className="relative flex flex-col border border-gray-100 rounded-xl items-center mx-auto max-w-fit px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
+      <div className="relative flex flex-col border border-green-100 rounded-xl items-center mx-auto max-w-fit px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
          <span className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap flex items-center gap-2 rounded-full bg-white/50 backdrop-blur-md px-4 py-1.5 text-xs font-semibold text-green-800 border border-green-500/40 ">
               <span className="h-1.5 w-1.5  animate-pulse rounded-full bg-green-500" />
               People search on Google not Instagram. 
           </span>
-        <div className="flex flex-col items-center text-center md:flex-row">
+        <div className="flex flex-col items-center py-6 gap-6 text-center md:flex-row ">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -57,12 +57,12 @@ export default function HomeHero() {
           >
            
 
-            <h1 className="mx-auto mt-6 max-w-4xl text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
               Your website,
               <span className="block text-accent">ready in days
                 <svg className="mx-auto w-3/5 md:w-full" width="460" height="15" viewBox="0 0 460 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_d_1_4)">
-                    <path d="M5 11C18.0316 11 31.0633 11 77.1745 9.73077C123.286 8.46154 202.082 5.92307 245.704 4.23461C289.327 2.54615 295.388 1.78461 323.816 1.39231C352.244 1 402.855 1 455 1" stroke="#2563EB" strokeWidth="2" strokeLinecap="round"/>
+                    <path d="M5 11C18.0316 11 31.0633 11 77.1745 9.73077C123.286 8.46154 202.082 5.92307 245.704 4.23461C289.327 2.54615 295.388 1.78461 323.816 1.39231C352.244 1 402.855 1 455 1" stroke="#2563EB" strokeWidth="4" strokeLinecap="round"/>
                   </g>
                   <defs>
                   <filter id="filter0_d_1_4" x="0" y="0" width="460" height="20" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
@@ -79,7 +79,7 @@ export default function HomeHero() {
             </h1>
 
             <p className="mx-auto mt-6 max-w-xl leading-6 text-foreground "> 
-              Browse code-ready, responsive, animated templates. Choose your template,
+              Browse responsive, animated, modern templates. Choose one,
               connect with us and go live in 1-2 days.
             </p>
 
@@ -105,7 +105,7 @@ export default function HomeHero() {
             initial={{ opacity: 0, y: 48 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-            className="mt-14 sm:mt-16"
+            className=""
           >
             <HeroPreview />
           </motion.div>

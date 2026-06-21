@@ -17,7 +17,7 @@ interface TemplateCardProps {
 
 function TemplatePreview({ category, name }: { category: string; name: string }) {
   return (
-    <div className="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-slate-100 via-white to-blue-50">
+    <div className="relative aspect-16/10 overflow-hidden bg-linear-to-br from-slate-100 via-white to-blue-50">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.18),transparent_42%),radial-gradient(circle_at_bottom_left,rgba(14,165,233,0.12),transparent_38%)]" />
       <div className="absolute inset-x-4 top-4 flex items-center gap-2 rounded-2xl border border-white/60 bg-white/70 px-3 py-2 backdrop-blur">
         <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
@@ -50,7 +50,7 @@ export default function TemplateCard({
   name,
   category,
   tagline,
-  price,
+  // price,
   deliveryDays,
   index = 0,
 }: TemplateCardProps) {
@@ -60,10 +60,12 @@ export default function TemplateCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
+      // style={{ top: index === 1 ? "20%" : "auto" }}
+      // className="sticky" 
     >
       <Link
         href={`/templates/${slug}`}
-        className="group block overflow-hidden rounded-2xl border border-border bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5"
+        className="group  block overflow-hidden rounded-2xl border border-border bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5"
       >
         <TemplatePreview category={category} name={name} />
 

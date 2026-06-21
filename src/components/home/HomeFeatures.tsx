@@ -15,7 +15,7 @@ export default function HomeFeatures() {
           description="Every template follows modern web standards and best practices - no shortcuts."
         />
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className=" grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {homeFeatures.map((feature, i) => (
             <motion.article
               key={feature.title}
@@ -23,7 +23,8 @@ export default function HomeFeatures() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group rounded-2xl border border-border bg-white p-6 shadow-sm shadow-black/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              style={{top: `calc(10% * ${i})`}}
+              className="group sticky rounded-2xl border border-border bg-white p-6 shadow-sm shadow-black/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
               <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-accent-light transition-colors duration-300 group-hover:bg-accent">
                 <HugeiconsIcon
