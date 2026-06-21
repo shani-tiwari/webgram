@@ -11,6 +11,7 @@ import {
   Eye,
 } from "@hugeicons/core-free-icons";
 import Image from "next/image";
+import TemplateGrid from "./TemplateGrid";
 
 interface TemplateData {
   id: number;
@@ -25,11 +26,12 @@ interface TemplateData {
   deliveryDays: number;
   pages: string[];
   images: string[];
+  link: string;
 }
 
 function TemplateHeroPreview({data}: {data: TemplateData}) {
   return (
-    <div className="relative h-full flex flex-col md:flex-row gap-1 justify-end overflow-hidden p-1 rounded-2xl border border-border bg-linear-to-br from-slate-400 via-white/20 to-blue-200">
+    <div className="relative h-full flex flex-col md:flex-row gap-1 justify-end overflow-hidden p-1 rounded-2xl border border-border bg-white shadow-sm">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.16),transparent_40%),radial-gradient(circle_at_bottom_left,rgba(14,165,233,0.12),transparent_35%)]" />
 
       <div className="h-full w-full bg-white/70  rounded-xl relative overflow-hidden ">
@@ -104,7 +106,7 @@ export default function TemplateInfo({ data }: { data: TemplateData }) {
             </div>
 
             <Link
-              href="https://cafe-bakery-c.vercel.app/"
+              href={data.link}
               target="_blank"
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent-light px-6 py-3 mb-4 font-semibold text-black/80 transition-colors duration-200 hover:bg-accent-light/80"
             >
@@ -187,6 +189,10 @@ export default function TemplateInfo({ data }: { data: TemplateData }) {
             ))}
           </div>
         </motion.div>
+      </div>
+      <div className="py-10">
+        <h1 className="text-2xl font-thin text-foreground mb-6">More Templates</h1>
+        <TemplateGrid/>
       </div>
     </div>
   );

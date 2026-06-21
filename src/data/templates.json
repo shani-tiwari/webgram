@@ -16,71 +16,70 @@
     ],
     "pages": ["Home", "Menu", "About", "Gallery", "Contact"],
     "techStack": ["Next.js 15", "Tailwind CSS", "Framer Motion", "TypeScript"],
-    "images": ["/cafe-1/cafe_c.png", "/cafe-1/menu.png", "/cafe-1/map.png"]
+    "images": ["/cafe-1/cafe_c.png", "/cafe-1/menu.png", "/cafe-1/map.png"],
+    "link": "https://cafe-bakery-c.vercel.app/"
   },
   {
     "id": 2,
-    "slug": "apex-saas",
-    "name": "Apex SaaS",
-    "category": "SaaS / Startup",
-    "tagline": "Launch your SaaS product with confidence",
-    "description": "A conversion-focused landing page for SaaS products and tech startups. Includes pricing tables, feature comparison grids, testimonials, FAQ accordion, and an integrated blog. Built with performance and SEO as top priorities.",
+    "slug": "hotel",
+    "name": "ELYRA HOTELS",
+    "category": "Hotel",
+    "tagline": "Book Your Stay",
+    "description": "A conversion-focused landing page for hotels, resorts, and hospitality businesses. Features an immersive hero with booking widget, room showcases with galleries, guest reviews, local attractions guide, and a seamless reservation flow. Optimized for travel SEO with schema markup for hotels.",
     "features": [
-      "Animated pricing toggle (monthly/yearly)",
-      "Feature comparison table",
-      "Testimonial slider with ratings",
       "FAQ accordion section",
-      "Blog with MDX support",
-      "Newsletter signup integration"
+      "Contact Page ",
+      "Rooms Showcase",
+      "About Page"
     ],
     "techStack": ["Next.js 15", "Tailwind CSS", "Framer Motion", "TypeScript"],
-    "price": "₹5,999",
+    "price": "₹2,999",
     "deliveryDays": 2,
     "pages": ["Home", "Features", "Pricing", "Blog", "About", "Contact"],
-    "images": [""]
+    "images": ["/hotel-1/main.png", "/hotel-1/rooms.png", "/hotel-1/extra.png"],
+    "link": "https://hotel-c.vercel.app/"
   },
   {
     "id": 3,
-    "slug": "jewell-portfolio",
-    "name": "Jewell Portfolio",
-    "category": "Portfolio / Agency",
-    "tagline": "Showcase your work, beautifully",
-    "description": "A minimal, elegant portfolio template for designers, developers, and creative agencies. Features smooth page transitions, project case studies with detailed layouts, a filterable work grid, and a blog for thought leadership.",
+    "slug": "yoga",
+    "name": "FlexiZen",
+    "category": "Yoga ",
+    "tagline": "A modern Yoga template",
+    "description": "A minimal, elegant  template for designers, developers, and creative agencies. Features smooth page transitions, project case studies with detailed layouts, a filterable work grid, and a blog for thought leadership.",
     "features": [
       "Filterable project grid",
       "Detailed case study pages",
       "Smooth page transitions",
       "Client logo marquee",
-      "Integrated blog section",
-      "Dark/light mode toggle"
+      "Integrated blog section"
     ],
     "techStack": ["Next.js 15", "Tailwind CSS", "Framer Motion", "TypeScript"],
-    "price": "₹3,999",
+    "price": "₹2,999",
     "deliveryDays": 1,
-    "pages": ["Home", "Work", "About", "Blog", "Contact"],
-        "images": [""]
+    "pages": ["Home", "About", "gallery", "FAQ", "Contact"],
+    "images": ["/yoga-1/home.png", "/yoga-1/guide.png", "/yoga-1/details.png"],
+    "link" : "https://yoga-c.vercel.app/" 
 
   },
   {
     "id": 4,
-    "slug": "medica-clinic",
-    "name": "Medica Clinic",
-    "category": "Healthcare",
-    "tagline": "Trusted healthcare, modern experience",
-    "description": "Designed for clinics, hospitals, and healthcare professionals. Features doctor profiles, appointment booking, service descriptions, patient testimonials, and health blog. HIPAA-friendly design patterns with accessibility in mind.",
+    "slug": "agency",
+    "name": "Web Design Agency",
+    "category": "Agency",
+    "tagline": "Modern Web Design Agency",
+    "description": "Designed for digital agencies, and creative professionals. Features doctor profiles, appointment booking, service descriptions, patient testimonials, and health blog. HIPAA-friendly design patterns with accessibility in mind.",
     "features": [
-      "Doctor profiles with specializations",
-      "Online appointment booking",
       "Service & department listing",
-      "Patient testimonial carousel",
-      "Health blog with categories",
-      "Emergency contact bar"
+      " testimonial carousel",
+      "Work  with categories",
+      " contact info"
     ],
     "techStack": ["Next.js 15", "Tailwind CSS", "Framer Motion", "TypeScript"],
-    "price": "₹5,499",
+    "price": "₹2,499",
     "deliveryDays": 2,
-    "pages": ["Home", "Services", "Doctors", "Blog", "Appointments", "Contact"],
-        "images": [""]
+    "pages": ["Home", "Services", "FAQ", "Team", "Contact"],
+    "images": ["/agency-1/main.png", "/agency-1/case.png","/agency-1/study.png"],
+    "link": "https://agency-c.vercel.app/"
 
   }
 ]
