@@ -10,6 +10,7 @@ import {
   CodeIcon,
   Eye,
 } from "@hugeicons/core-free-icons";
+import Image from "next/image";
 
 interface TemplateData {
   id: number;
@@ -23,28 +24,25 @@ interface TemplateData {
   price: string;
   deliveryDays: number;
   pages: string[];
+  images: string[];
 }
 
-function TemplateHeroPreview() {
+function TemplateHeroPreview({data}: {data: TemplateData}) {
   return (
-    <div className="relative h-full flex flex-col md:flex-row gap-4 justify-end overflow-hidden p-2 rounded-2xl border border-border bg-linear-to-br from-slate-400 via-white/20 to-blue-600">
+    <div className="relative h-full flex flex-col md:flex-row gap-1 justify-end overflow-hidden p-1 rounded-2xl border border-border bg-linear-to-br from-slate-400 via-white/20 to-blue-200">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.16),transparent_40%),radial-gradient(circle_at_bottom_left,rgba(14,165,233,0.12),transparent_35%)]" />
 
-      {/* <div className="absolute h-[8%] flex items-center justify-center w-fit inset-x-5 top-5 rounded-2xl border border-white/60 bg-white/70 p-3 backdrop-blur">
-        <div className="flex items-center gap-1">
-          <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
-          <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
-          <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
-          <span className="ml-2 text-xs font-medium text-slate-500">{name}</span>
-        </div>
-      </div> */}
-
-      <div className="w-full h-full bg-white/70  rounded-xl">
-
+      <div className="h-full w-full bg-white/70  rounded-xl relative overflow-hidden ">
+        <Image src={data.images[0]} alt={data.name} fill className="object-fill hover:scale-103 transition-all duration-500" />
       </div>
-      <div className="flex flex-col h-full w-full max-w-sm rounded-2xl shadow-lg shadow-blue-950/5 backdrop-blur-sm ">
-        <div className="bg-black/20 rounded-xl h-full w-full mb-4"></div>
-        <div className="bg-black/20 rounded-xl h-full w-full"></div>
+
+      <div className="flex flex-col gap-1 h-full w-full max-w-sm rounded-2xl shadow-lg shadow-blue-950/5 backdrop-blur-sm ">
+        <div className="bg-black/20 rounded-xl h-full w-full relative overflow-hidden">
+          <Image src={data.images[1]} alt={data.name} fill className="object-fill hover:scale-103 transition-all duration-500" />
+        </div>
+        <div className="bg-black/20 rounded-xl h-full w-full relative overflow-hidden">
+          <Image src={data.images[2]} alt={data.name} fill className="object-fill hover:scale-103 transition-all duration-500" />
+        </div>
       </div>
 
     </div>
@@ -73,7 +71,7 @@ export default function TemplateInfo({ data }: { data: TemplateData }) {
         transition={{ duration: 0.5 }}
         className="w-full h-[90vh] md:h-[70vh]"
       >
-        <TemplateHeroPreview />
+        <TemplateHeroPreview data={data} />
       </motion.div>
 
 

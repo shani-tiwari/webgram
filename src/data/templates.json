@@ -1,23 +1,22 @@
 [
   {
     "id": 1,
-    "slug": "flavor-studio",
-    "name": "Flavor Studio",
-    "category": "Restaurant",
-    "price": "₹4,999",
+    "slug": "elixir-cafe",
+    "name": "Elixir Cafe",
+    "category": "Cafe",
+    "price": "₹3,999",
     "deliveryDays": 2,
-    "tagline": "A modern restaurant & café template",
-    "description": "Crafted for restaurants, cafés, and food businesses. Features a stunning hero with parallax menu sections, online reservation form, chef spotlight, and a full gallery. Optimized for local SEO with schema markup for restaurants.",
+    "tagline": "A modern café template",
+    "description": "Crafted for cafes, and food businesses. Features a stunning hero with parallax menu sections, online reservation form, chef spotlight, and a full gallery. Optimized for local SEO with schema markup for cafes.",
     "features": [
-      "Online reservation system",
       "Interactive food menu with categories",
       "Chef & team spotlight section",
       "Photo gallery with lightbox",
-      "Google Maps integration",
-      "Customer reviews carousel"
+      "Google Maps integration"
     ],
-    "pages": ["Home", "Menu", "About", "Reservations", "Gallery", "Contact"],
-    "techStack": ["Next.js 15", "Tailwind CSS", "Framer Motion", "TypeScript"]
+    "pages": ["Home", "Menu", "About", "Gallery", "Contact"],
+    "techStack": ["Next.js 15", "Tailwind CSS", "Framer Motion", "TypeScript"],
+    "images": ["/cafe-1/cafe_c.png", "/cafe-1/menu.png", "/cafe-1/map.png"]
   },
   {
     "id": 2,
