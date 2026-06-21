@@ -10,33 +10,24 @@ function HeroPreview() {
     <div className="relative mx-auto max-w-fit">
       <div className="absolute -inset-4 -z-10 rounded-4xl bg-accent/10 blur-3xl" />
 
-        {/* <div className="flex items-center gap-2 border-b border-border/60 bg-muted/60 px-6 py-3">
-          <span className="h-3 w-3 rounded-full bg-red-400" />
-          <span className="h-3 w-3 rounded-full bg-amber-400" />
-          <span className="h-3 w-3 rounded-full bg-emerald-400" />
-          <span className="ml-2 text-xs font-medium text-muted-foreground">
-            WebGram preview
-          </span>
-        </div> */}
-
         <div className="relative">
-  {/* Blur Glow */}
-  <div className="absolute inset-0 -z-10 rounded-[32px] bg-radial from-white/60 via-white/20 to-transparent blur-3xl scale-110" />
+          {/* Blur Glow */}
+          <div className="absolute inset-0 -z-10 rounded-[32px] bg-radial from-white/60 via-white/20 to-transparent blur-3xl scale-110" />
 
-  <div className="h-full w-full bg-white/50 p-2 rounded-2xl overflow-hidden">
-    <video
-      autoPlay
-      loop
-      muted
-      playsInline
-      className="w-full h-full -mb-2 max-w-xl mx-auto rounded-2xl object-cover border-2 border-border shadow-[8px_8px_24px_#00000040]"
-    >
-      <source src="/hero-video.mp4" type="video/mp4" />
-    </video>
-  </div>
-</div>
-
+        <div className="h-full min-h-[300px] min-w-[400px] w-full bg-white/50 p-2 rounded-2xl overflow-hidden">
+          <video
+            autoPlay
+            loop
+            // muted
+            playsInline
+            className="w-full h-full -mb-2 max-w-xl mx-auto rounded-2xl object-cover border-2 border-border shadow-[8px_8px_24px_#00000040]"
+          >
+            <source src="/hero-video.mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
+
+    </div>
   );
 }
 

@@ -8,6 +8,26 @@ export const metadata: Metadata = {
   title: "Templates - WebGram | Browse All Designs",
   description:
     "Explore our collection of code-ready, responsive, SEO-optimized Next.js website templates for restaurants, SaaS, portfolios, and more.",
+  openGraph: {
+    title: "Templates - WebGram | Browse All Designs",
+    description:
+      "Explore our collection of code-ready, responsive, SEO-optimized Next.js website templates for restaurants, SaaS, portfolios, and more.",
+    images: [
+      {
+        url: "/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "WebGram Templates Preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Templates - WebGram | Browse All Designs",
+    description:
+      "Explore our collection of code-ready, responsive, SEO-optimized Next.js website templates for restaurants, SaaS, portfolios, and more.",
+    images: ["/preview.png"],
+  },
 };
 
 export default function Templates() {

@@ -23,9 +23,32 @@ export async function generateMetadata({
     return { title: "Template Not Found — WebGram" };
   }
 
+  const title = `${template.name} — ${template.category} Template | WebGram`;
+  const description = template.description;
+  const imageUrl = template.images?.[0] || "/preview.png";
+
   return {
-    title: `${template.name} — ${template.category} Template | WebGram`,
-    description: template.description,
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${template.name} Website Template Preview`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [imageUrl],
+    },
   };
 }
 
