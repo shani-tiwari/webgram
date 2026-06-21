@@ -10,7 +10,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: siteUrl,
   title: "WebGram — Code-Ready Website Templates | Go Live in 1 - 2 Days",
   description:
     "Browse premium, responsive, SEO-optimized Next.js + Tailwind CSS website templates. Pick a design, personalize it for your brand, and launch in 1–2 days.",

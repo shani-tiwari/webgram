@@ -18,7 +18,7 @@ function HeroPreview() {
           <video
             autoPlay
             loop
-            // muted
+            muted
             playsInline
             className="w-full h-full -mb-2 max-w-xl mx-auto rounded-2xl object-cover border-2 border-border shadow-[8px_8px_24px_#00000040]"
           >

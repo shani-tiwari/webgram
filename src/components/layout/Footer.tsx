@@ -22,15 +22,15 @@ const footerLinks = {
 };
 
 const socials = [
-  { icon: InstagramIcon, href: "#", label: "Instagram" },
-  { icon: NewTwitterIcon, href: "#", label: "X (Twitter)" },
-  { icon: Linkedin01Icon, href: "#", label: "LinkedIn" },
-  { icon: Github01Icon, href: "#", label: "GitHub" },
+  { icon: InstagramIcon, href: "https://instagram.com/shani.develops", label: "Instagram" },
+  { icon: NewTwitterIcon, href: "https://x.com/shanidevelops", label: "X (Twitter)" },
+  { icon: Linkedin01Icon, href: "https://linkedin.com/in/shanitiwarii", label: "LinkedIn" },
+  { icon: Github01Icon, href: "https://github.com/shani-tiwari", label: "GitHub" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border/70 bg-foreground text-white">
+    <footer className=" border-t border-border/70 bg-foreground text-white">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           <div className="md:col-span-1">
@@ -52,9 +52,10 @@ export default function Footer() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 transition-colors duration-200 hover:bg-accent"
+                  target="_blank"
+                  className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/20 shadow-md bg-white/10 transition-colors duration-200 hover:bg-accent"
                 >
-                  <HugeiconsIcon icon={social.icon} size={16} color="white" />
+                  <HugeiconsIcon icon={social.icon} size={22} color="white" className="text-shadow-sm" />
                 </a>
               ))}
             </div>
