@@ -1,10 +1,12 @@
 import Link from "next/link";
-import { HugeiconsIcon } from "@hugeicons/react";
+import { HugeiconsIcon, IconSvgElement } from "@hugeicons/react";
 import {
   InstagramIcon,
   NewTwitterIcon,
   Linkedin01Icon,
   Github01Icon,
+  Email,
+  Dribbble,
 } from "@hugeicons/core-free-icons";
 
 const footerLinks = {
@@ -27,7 +29,11 @@ const socials = [
   { icon: NewTwitterIcon, href: "https://x.com/shanidevelops", label: "X (Twitter)" },
   { icon: Linkedin01Icon, href: "https://linkedin.com/in/shanitiwarii", label: "LinkedIn" },
   { icon: Github01Icon, href: "https://github.com/shani-tiwari", label: "GitHub" },
+  { icon: Email, href: "mailto:shanitiwari2021@gmail.com", label: "Email" },
+  { icon: Dribbble, href: "https://dribbble.com/shani-tiwari", label: "Dribbble" },
+  
 ];
+
 
 export default function Footer() {
   return (
@@ -47,19 +53,9 @@ export default function Footer() {
               Code-ready, responsive website templates. Pick a design,
               customize it, and go live in 1-2 days.
             </p>
-            <div className="flex items-center gap-3 border-b w-fit border-white/30 rounded-xl pb-3">
-              {socials.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  target="_blank"
-                  className="flex h-10 w-10 items-center justify-center rounded-lg rounded-t-2xl outline-2 outline-offset-1 outline-white/20 shadow-md bg-white/10 transition-colors duration-200 hover:bg-accent"
-                >
-                  <HugeiconsIcon icon={social.icon} size={22} color="white" className="text-shadow-sm" />
-                </a>
-              ))}
-            </div>
+
+
+
           </div>
 
           {Object.entries(footerLinks).map(([heading, links]) => (
@@ -89,20 +85,28 @@ export default function Footer() {
             <p className="mb-4 text-sm text-white/70">
               Get notified on new templates launch.
             </p>
-            <form className="flex gap-2" action="/contact">
+            <form className="flex gap-2 mb-4" action="/contact">
               <input
                 type="email"
                 name="email"
+                disabled
                 placeholder="your@email.com"
                 className="min-w-0 flex-1 rounded-lg rounded-t-xl outline-2 outline-offset-1 outline-white/20 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none"
               />
               <button
                 type="submit"
+                disabled
                 className="rounded-lg rounded-t-4xl bg-accent px-4 py-2 text-sm font-semibold outline-2 outline-offset-1 outline-white/40 text-white transition-colors hover:bg-accent-hover"
               >
                 Join
               </button>
             </form>
+            {/* social icons */}
+            <div className="grid grid-cols-6 md:grid-cols-6 items-center gap-x-4 md:gap-x-10 w-fit rounded-xl pb-3">
+              {socials.map((social) => (
+                <SocialIcon key={social.label} icon={social.icon} href={social.href} label={social.label} />
+              ))}
+            </div>
           </div>
         </div>
 
@@ -127,5 +131,20 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+  );
+}
+
+
+export function SocialIcon({icon, href, label}: {icon: IconSvgElement, href: string, label: string}) {
+  return (
+    <a
+      key={label}
+      href={href}
+      aria-label={label}
+      target="_blank"
+      className="flex h-10 w-10 items-center justify-center rounded-lg rounded-t-2xl outline-2 outline-offset-1 outline-white/20 shadow-md bg-white/10 transition-colors duration-200 hover:bg-accent"
+    >
+      <HugeiconsIcon icon={icon} size={22} color="white" className="text-shadow-sm" />
+    </a>
   );
 }
