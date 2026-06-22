@@ -47,14 +47,14 @@ export default function Footer() {
               Code-ready, responsive website templates. Pick a design,
               customize it, and go live in 1-2 days.
             </p>
-            <div className="flex items-center gap-3 border-b w-fit border-accent-light pb-3">
+            <div className="flex items-center gap-3 border-b w-fit border-white/30 rounded-xl pb-3">
               {socials.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
                   target="_blank"
-                  className="flex h-10 w-10 items-center justify-center rounded-lg rounded-t-2xl border border-white/20 shadow-md bg-white/10 transition-colors duration-200 hover:bg-accent"
+                  className="flex h-10 w-10 items-center justify-center rounded-lg rounded-t-2xl outline-2 outline-offset-1 outline-white/20 shadow-md bg-white/10 transition-colors duration-200 hover:bg-accent"
                 >
                   <HugeiconsIcon icon={social.icon} size={22} color="white" className="text-shadow-sm" />
                 </a>
@@ -94,11 +94,11 @@ export default function Footer() {
                 type="email"
                 name="email"
                 placeholder="your@email.com"
-                className="min-w-0 flex-1 rounded-lg rounded-t-xl border border-white/10 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none"
+                className="min-w-0 flex-1 rounded-lg rounded-t-xl outline-2 outline-offset-1 outline-white/20 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none"
               />
               <button
                 type="submit"
-                className="rounded-lg rounded-t-4xl bg-accent px-4 py-2 text-sm font-semibold border border-accent-light text-white transition-colors hover:bg-accent-hover"
+                className="rounded-lg rounded-t-4xl bg-accent px-4 py-2 text-sm font-semibold outline-2 outline-offset-1 outline-white/40 text-white transition-colors hover:bg-accent-hover"
               >
                 Join
               </button>

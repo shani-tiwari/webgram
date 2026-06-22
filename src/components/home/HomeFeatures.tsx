@@ -24,9 +24,9 @@ export default function HomeFeatures() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               style={{top: `calc(10% * ${i})`}}
-              className="group sticky rounded-3xl rounded-t-4xl border border-border bg-white p-6 shadow-sm shadow-black/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              className="group sticky rounded-2xl rounded-tr-[4rem] outline-2 outline-offset-2 outline-black/10 bg-white p-6 shadow-sm shadow-black/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-accent-light transition-colors duration-300 group-hover:bg-accent">
+              <span className="mb-4 flex h-11 w-11 items-center justify-center outline-2 outline-offset-5 outline-accent-light rounded-xl bg-accent-light transition-colors duration-300 group-hover:bg-accent">
                 <HugeiconsIcon
                   icon={feature.icon}
                   size={20}

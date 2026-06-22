@@ -31,14 +31,14 @@ interface TemplateData {
 
 function TemplateHeroPreview({data}: {data: TemplateData}) {
   return (
-    <div className="relative h-full flex flex-col md:flex-row gap-1 justify-end overflow-hidden p-1 rounded-2xl border border-border bg-white shadow-sm">
+    <div className="relative h-full flex flex-col md:flex-row gap-0.5 justify-end overflow-hidden rounded-2xl outline-2 outline-offset-1 outline-black/20  shadow-sm">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.16),transparent_40%),radial-gradient(circle_at_bottom_left,rgba(14,165,233,0.12),transparent_35%)]" />
 
       <div className="h-full w-full bg-white/70  rounded-xl relative overflow-hidden ">
         <Image src={data.images[0]} alt={data.name} fill className="object-fill hover:scale-103 transition-all duration-500" />
       </div>
 
-      <div className="flex flex-col gap-1 h-full w-full max-w-sm rounded-2xl shadow-lg shadow-blue-950/5 backdrop-blur-sm ">
+      <div className="flex flex-col gap-0.5 h-full w-full max-w-sm rounded-2xl backdrop-blur-sm ">
         <div className="bg-black/20 rounded-xl h-full w-full relative overflow-hidden">
           <Image src={data.images[1]} alt={data.name} fill className="object-fill hover:scale-103 transition-all duration-500" />
         </div>
@@ -53,7 +53,7 @@ function TemplateHeroPreview({data}: {data: TemplateData}) {
 
 export default function TemplateInfo({ data }: { data: TemplateData }) {
   return (
-    <div className="mx-auto max-w-6xl px-1 sm:px-6">
+    <div className="mx-auto max-w-6xl px-1 sm:px-2">
       <motion.nav
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -86,10 +86,10 @@ export default function TemplateInfo({ data }: { data: TemplateData }) {
           className=" flex flex-col md:flex-row w-full md:gap-20"
         >
           <div className="flex flex-col gap-2  w-full max-w-lg">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.17em] text-accent bg-accent-light px-6 py-2 rounded-xl rounded-tr-4xl w-fit border border-accent/50">
+            <p className="text-[11px] mb-4 font-semibold uppercase tracking-[0.17em] text-accent bg-accent-light px-6 py-2 rounded-xl rounded-tr-4xl w-fit outline-2 outline-offset-1 outline-blue-500/30">
                 {data.category.join(" / ")}
               </p>
-            <h1 className="mb-3 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+            <h1 className="mb-1 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
               {data.name}
             </h1>
             <p className="mb-6 leading-relaxed text-muted-foreground">
@@ -108,14 +108,14 @@ export default function TemplateInfo({ data }: { data: TemplateData }) {
             <Link
               href={data.link}
               target="_blank"
-              className="inline-flex items-center justify-center gap-2 rounded-xl rounded-t-4xl bg-accent-light px-6 py-3 mb-4 border border-accent/60 font-semibold text-black/80 transition-colors duration-200 hover:bg-accent-light/80"
+              className="inline-flex items-center justify-center gap-2 rounded-xl rounded-t-4xl bg-accent-light px-6 py-3 mb-4 outline-2 outline-offset-1 outline-blue-500/20 font-semibold text-black/80 transition-colors duration-200 hover:bg-accent-light/80"
             >
               Live Preview
               <HugeiconsIcon icon={Eye} size={18} />
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 rounded-xl rounded-t-4xl bg-accent px-6 py-3 font-semibold text-white transition-colors duration-200 hover:bg-accent-hover"
+              className="inline-flex items-center justify-center gap-2 rounded-xl rounded-t-4xl outline-2 outline-offset-1 outline-black/20 bg-accent px-6 py-3 font-semibold text-white transition-colors duration-200 hover:bg-accent-hover"
             >
               Get This Template
               <HugeiconsIcon icon={ArrowRight01Icon} size={18} />
@@ -170,7 +170,7 @@ export default function TemplateInfo({ data }: { data: TemplateData }) {
             {data.techStack.map((t) => (
               <span
                 key={t}
-                className="rounded-lg rounded-t-3xl border border-border bg-muted px-3 py-1.5 text-xs font-medium text-foreground"
+                className="rounded-lg rounded-t-3xl outline-2 outline-offset-1 outline-black/20 bg-muted px-3 py-1.5 text-xs font-medium text-foreground"
               >
                 {t}
               </span>
@@ -182,7 +182,7 @@ export default function TemplateInfo({ data }: { data: TemplateData }) {
             {data.pages.map((p) => (
               <span
                 key={p}
-                className="rounded-lg rounded-t-3xl bg-accent-light px-3 py-1.5 text-xs font-medium text-accent"
+                className="rounded-lg rounded-t-3xl outline-2 outline-offset-1 outline-blue-500/30 bg-accent-light px-3 py-1.5 text-xs font-medium text-accent"
               >
                 {p}
               </span>

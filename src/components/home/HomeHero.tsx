@@ -37,8 +37,8 @@ export default function HomeHero() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.08),transparent_34%),linear-gradient(to_bottom,rgba(245,247,255,0.9),transparent_55%)]" />
       <div className="relative flex flex-col border border-green-100 rounded-xl rounded-t-4xl items-center mx-auto max-w-fit px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
 
-         <span className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap flex items-center gap-2 rounded-xl rounded-t-4xl bg-white/50 backdrop-blur-md px-4 py-1.5 text-sm font-semibold text-green-800 border border-green-500/40 ">
-              <span className="h-1.5 w-1.5  animate-pulse rounded-full  bg-green-500" />
+         <span className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap flex items-center gap-3 rounded-xl rounded-t-4xl bg-white/50 backdrop-blur-md px-4 py-1.5 text-sm font-medium text-blue-800 outline-2 outline-offset-1 outline-blue-500/40 ">
+            <span className="h-1.5 w-1.5  animate-pulse rounded-full  bg-blue-500" />
               People search on Google not Instagram. 
           </span>
 
@@ -79,14 +79,14 @@ export default function HomeHero() {
             <div className="mt-10 flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center">
               <Link
                 href="/templates"
-                className="group w-fit mx-auto inline-flex items-center justify-center gap-2 rounded-xl rounded-t-4xl bg-accent px-7 py-3.5 font-semibold text-white shadow-sm border-2 border-white/80  shadow-accent/20 transition-colors duration-200 hover:bg-accent-hover"
+                className="group w-fit mx-auto inline-flex items-center justify-center gap-2 rounded-xl rounded-t-4xl bg-accent px-7 py-3.5 font-semibold text-white shadow-sm outline-2 outline-offset-0.5 outline-black/20 shadow-accent/20 transition-colors duration-200 hover:bg-accent-hover"
               >
                 Explore Templates
                 <HugeiconsIcon className="mt-1 group-hover:scale-103 transition-all duration-200" icon={SearchSquareIcon} size={20} />
               </Link>
               <Link
                 href="/contact"
-                className="group w-fit mx-auto inline-flex items-center justify-center gap-2 rounded-xl rounded-t-4xl border border-border bg-white px-7 py-3.5 font-semibold text-foreground transition-colors duration-200 hover:bg-muted"
+                className="group w-fit mx-auto inline-flex items-center justify-center gap-2 rounded-xl rounded-t-4xl outline-2 outline-offset-0.5 outline-black/20 bg-white px-7 py-3.5 font-semibold text-foreground transition-colors duration-200 hover:bg-muted"
               >
                 Get in Touch 🫱🏼‍🫲🏻
                 {/* <HugeiconsIcon className="mt-1 group-hover:scale-103 transition-all duration-200" icon={TouchInteraction04Icon} size={20} /> */}

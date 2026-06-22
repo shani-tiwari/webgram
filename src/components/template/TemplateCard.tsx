@@ -37,7 +37,7 @@ export default function TemplateCard({
     >
       <Link
         href={`/templates/${slug}`}
-        className="group p-1 block overflow-hidden rounded-3xl  border border-border bg-linear-to-br from-slate-100 via-white to-blue-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5"
+        className="group p-1 block overflow-hidden rounded-3xl  outline-2 outline-offset-1 outline-black/20 bg-linear-to-br from-slate-100 via-white to-blue-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5"
       >
         {/* template preview */}
         <div className="relative aspect-16/10 overflow-hidden rounded-3xl rounded-br-[6rem] border border-accent-light">
@@ -52,12 +52,12 @@ export default function TemplateCard({
               <p className="mb-3 text-sm leading-relaxed text-muted-foreground">
                 {tagline}
               </p>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.17em] text-accent bg-accent-light px-6 py-2 rounded-xl rounded-tr-4xl w-fit border border-accent/50">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.17em] text-accent bg-accent-light px-6 py-2 rounded-xl rounded-tr-4xl w-fit outline-2 outline-offset-1 outline-blue-500/40">
                 {category.join(" / ")}
               </p>
           </div>
 
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-muted border-2 border-accent-light transition-colors duration-200 group-hover:bg-accent group-hover:text-white">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl bg-accent-light outline-2 outline-offset-1 outline-blue-500/40 transition-colors duration-200 group-hover:bg-accent group-hover:text-white">
               <HugeiconsIcon icon={ArrowRight01Icon} size={20} />
             </span>
 
