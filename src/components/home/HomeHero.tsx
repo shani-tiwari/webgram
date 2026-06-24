@@ -14,7 +14,7 @@ function HeroPreview() {
           {/* Blur Glow */}
           <div className="absolute inset-0 -z-10 rounded-[32px] bg-radial from-white/60 via-white/20 to-transparent blur-3xl scale-110" />
 
-        <div className="h-full min-h-[300px] min-w-[320px] md:min-w-[400px] w-full bg-white/50 p-2 rounded-2xl overflow-hidden">
+        <div className="h-full min-h-[200px] md:min-h-[300px] min-w-[320px] md:min-w-[400px] w-full bg-white/50 p-2 rounded-2xl overflow-hidden">
           <video
             autoPlay
             loop
@@ -40,6 +40,10 @@ export default function HomeHero() {
          <span className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap flex items-center gap-3 rounded-xl rounded-t-4xl bg-white/50 backdrop-blur-md px-4 py-1.5 text-sm font-medium text-blue-800 outline-2 outline-offset-1 outline-blue-500/40 ">
             <span className="h-1.5 w-1.5  animate-pulse rounded-full  bg-blue-500" />
               People search on Google not Instagram. 
+          </span>
+         <span className="absolute bottom-6 md:bottom-12 left-1/2 -translate-x-1/2 whitespace-nowrap flex items-center gap-3 rounded-xl rounded-t-4xl bg-white/50 backdrop-blur-md px-4 py-1.5 text-sm font-medium text-blue-800 outline-2 outline-offset-1 outline-blue-500/40 ">
+            <span className="h-1.5 w-1.5  animate-pulse rounded-full  bg-blue-500" />
+              Trusted by 15+ Global Business Owners . 
           </span>
 
         <div className="flex flex-col items-center py-6 gap-6 text-center md:flex-row ">

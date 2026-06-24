@@ -17,7 +17,7 @@ export default function HomeTemplates() {
           description="Each template is fully coded, responsive, animated, and optimized for search engines."
         />
 
-        <TemplateGrid />
+        <TemplateGrid flag={true}/>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}

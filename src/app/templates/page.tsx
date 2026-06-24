@@ -43,7 +43,7 @@ export default function Templates() {
             description="Every template is fully coded, responsive, animated, and SEO optimized. Choose the one that fits your business."
           />
 
-          <TemplateGrid />
+          <TemplateGrid flag={false}/> 
         </div>
       </main>
 

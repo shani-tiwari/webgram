@@ -44,15 +44,15 @@ export default function TemplateCard({
           <Image src={images[0]} alt={name} fill className="object-fill hover:scale-101 transition-all duration-500" />
         </div>
 
-        <div className="py-2 px-6 flex justify-between items-center ">
-          <div className=" ">
+        <div className=" py-2 px-6 flex justify-between items-center ">
+          <div className=" w-full ">
               <h3 className=" text-lg font-semibold text-foreground transition-colors duration-200 group-hover:text-accent">
                 {name}
               </h3>
               <p className="mb-3 text-sm leading-relaxed text-muted-foreground">
-                {tagline}
+                {tagline} 
               </p>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.17em] text-accent bg-accent-light px-6 py-2 rounded-xl rounded-tr-4xl w-fit outline-2 outline-offset-1 outline-blue-500/40">
+              <p className=" text-[11px] w-full md:w-fit font-semibold uppercase tracking-wider md:tracking-[0.17em] text-accent bg-accent-light px-4 md:px-6 py-2 rounded-xl rounded-tr-4xl outline-2 outline-offset-1 outline-blue-500/40">
                 {category.join(" / ")}
               </p>
           </div>

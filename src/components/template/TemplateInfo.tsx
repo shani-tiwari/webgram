@@ -31,7 +31,11 @@ interface TemplateData {
 
 function TemplateHeroPreview({data}: {data: TemplateData}) {
   return (
-    <div className="relative h-full flex flex-col md:flex-row gap-0.5 justify-end overflow-hidden rounded-2xl outline-2 outline-offset-1 outline-black/20  shadow-sm">
+    <motion.div 
+     initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+     className="relative h-full flex flex-col md:flex-row gap-0.5 justify-end overflow-hidden rounded-2xl outline-2 outline-offset-1 outline-black/20  shadow-sm">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.16),transparent_40%),radial-gradient(circle_at_bottom_left,rgba(14,165,233,0.12),transparent_35%)]" />
 
       <div className="h-full w-full bg-white/70  rounded-xl relative overflow-hidden ">
@@ -47,7 +51,7 @@ function TemplateHeroPreview({data}: {data: TemplateData}) {
         </div>
       </div>
 
-    </div>
+    </motion.div>
   );
 };
 
@@ -192,7 +196,7 @@ export default function TemplateInfo({ data }: { data: TemplateData }) {
       </div>
       <div className="py-10">
         <h1 className="text-2xl font-thin text-foreground mb-6">More Templates</h1>
-        <TemplateGrid/>
+        <TemplateGrid flag={true}/>
       </div>
     </div>
   );

@@ -1,5 +1,25 @@
 [
   {
+    "id": 11,
+    "slug": "pour",
+    "name": "Velvet Pour",
+    "category": ["Cafe", "Restaurent", "Bakery"],
+    "price": "₹3,999",
+    "deliveryDays": 2,
+    "tagline": "A modern café template",
+    "description": "Velvet Pour is a modern, sophisticated café and bakery website template built with Next.js 15 and Tailwind CSS. It features a stunning, responsive design with smooth animations, a detailed menu section, and a built-in reservation system. Perfect for coffee shops, patisseries, and bistros looking to enhance their online presence.",
+    "features": [
+      "Interactive food menu with categories",
+      "Chef & team spotlight section",
+      "Photo gallery with lightbox",
+      "Google Maps integration"
+    ],
+    "pages": ["Home", "Cocktails", "About", "Gallery", "Contact"],
+    "techStack": ["Next.js 15", "Tailwind CSS", "Framer Motion", "TypeScript"],
+    "images": ["/velvet-pour/img-1.png", "/velvet-pour/img-2.png", "/velvet-pour/img-3.png"],
+    "link": "https://cafedrinks.vercel.app/"
+  },
+  {
     "id": 1,
     "slug": "elixir-cafe",
     "name": "Elixir Cafe",
