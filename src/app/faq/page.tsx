@@ -7,6 +7,7 @@ import { ArrowRight01Icon } from "@hugeicons/core-free-icons";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SectionHeading from "@/components/shared/SectionHeading";
+import Link from "next/link";
 
 interface FAQItem {
   question: string;
@@ -14,26 +15,55 @@ interface FAQItem {
 }
 
 const faqItems: FAQItem[] = [
+  // {
+  //   question: "What is WebGram?",
+  //   answer: "WebGram is a website marketplace offering modern, code-ready business websites. Choose a template, share your business details, and get a personalized website delivered and deployed with a live link."
+  // },
   {
-    question: "What is WebGram?",
-    answer: "WebGram is a premium website template marketplace. We provide code-ready, fully responsive, and SEO-optimized website templates designed to help businesses, developers, and creators launch high-quality sites in just 1-2 days.",
+    question: "1. How does the process work?",
+    answer: "Simply choose a template and contact us. We'll collect your business details, logo, text, images, and branding preferences. After replacing the content and performing basic setup, we'll deploy the website and share the live URL with you."
   },
   {
-    question: "How does the customization process work?",
-    answer: "After selecting a template, you can contact us with your business details, logo, branding colors, copy, and images. We will customize the template to match your brand identity and handle the initial setup so it is fully ready to deploy.",
+    question: "2. What is included with every website?",
+    answer: "Every website includes responsive design, content replacement, image and logo updates, basic SEO setup, deployment to Vercel, a live website link, and 15 days of support after delivery."
   },
   {
-    question: "Are the templates mobile-responsive and SEO-optimized?",
-    answer: "Yes, absolutely! Every template on WebGram is crafted with a mobile-first approach, ensuring seamless responsiveness across all screen sizes. We also follow semantic HTML structures and optimize asset delivery to make sure your site is lightning fast and search-engine friendly.",
+    question: "3. What content do I need to provide?",
+    answer: "You'll need to provide your business information, logo, images, contact details, social links, and any text you'd like displayed on the website. If you already have a website, you can simply share it as a reference."
   },
   {
-    question: "Can I customize the code myself?",
-    answer: "Yes. All our templates are built using modern frameworks like Next.js and Tailwind CSS with clean, modular, and developer-friendly code structures. Once you purchase a template, you have full ownership of the codebase and can extend the logic or design as you see fit.",
+    question: "4. Are the websites mobile-responsive and SEO-friendly?",
+    answer: "Yes. Every website is designed to work seamlessly across desktop, tablet, and mobile devices. We also implement basic SEO best practices to help your website perform better in search engines."
   },
   {
-    question: "Do you offer hosting and domain setup support?",
-    answer: "While hosting fees are not included in the template price, we assist you in deploying the website to hosting platforms like Vercel, Netlify, or your own server, and configure your custom domain name so that going live is completely stress-free.",
+    question: "5. Will I get the source code?",
+    answer: "Yes, source code can be provided upon request. Most clients only need the live website, but developers or businesses wanting full ownership can request the code during the delivery process."
   },
+  {
+    question: "6. Can I request changes after purchase?",
+    answer: "Yes. Minor content-related updates are covered during the support period. Additional pages, layout modifications, or new features can be requested separately for an additional fee."
+  },
+  {
+    question: "7. Are these templates sold exclusively?",
+    answer: "No. Templates can be sold to multiple clients. If you require exclusive ownership, a custom pricing and customization package can be discussed."
+  },
+  {
+    question: "8. Do you provide hosting and deployment?",
+    answer: "Yes. Your website will be deployed and delivered with a live URL. Hosting management and long-term maintenance are not included, but you'll receive a ready-to-use live website."
+  },
+  {
+    question: "9. What kind of support do you provide?",
+    answer: "Every purchase includes 15 days of support. Support is available through Instagram, WhatsApp, or email and covers guidance, minor fixes, and content-related assistance."
+  },
+  {
+    question: "10. Do you offer custom website development?",
+    answer: "The base package focuses on template personalization rather than full custom development. Major feature development, custom layouts, or additional pages can be discussed as separate projects."
+  },
+  {
+    question: "11. Do you offer refunds?",
+    answer: "No. Due to the digital nature of the product and the time spent personalizing each website, all sales are final and non-refundable."
+  }
+
 ];
 
 export default function FAQ() {
@@ -103,6 +133,9 @@ export default function FAQ() {
                 );
               })}
             </div>
+          </div>
+          <div className=" flex justify-center">
+            <p className="text-center text-md text-muted-foreground mt-14 leading-6">Still need help? Contact us on <Link href="https://instagram.com/shani.develops" target="_blank" className="text-primary underline">Instagram</Link>, or <Link href="/contact" className="text-primary underline">Email</Link>.</p>
           </div>
         </section>
       </main>

@@ -28,9 +28,9 @@ const socials = [
   { icon: InstagramIcon, href: "https://instagram.com/shani.develops", label: "Instagram" },
   { icon: NewTwitterIcon, href: "https://x.com/shanidevelops", label: "X (Twitter)" },
   { icon: Linkedin01Icon, href: "https://linkedin.com/in/shani-tiwarii", label: "LinkedIn" },
-  { icon: Github01Icon, href: "https://github.com/shani-tiwari", label: "GitHub" },
+  // { icon: Github01Icon, href: "https://github.com/shani-tiwari", label: "GitHub" },
   { icon: Email, href: "mailto:shanitiwari2021@gmail.com", label: "Email" },
-  { icon: Dribbble, href: "https://dribbble.com/shani-tiwari", label: "Dribbble" },
+  // { icon: Dribbble, href: "https://dribbble.com/shani-tiwari", label: "Dribbble" },
   
 ];
 
@@ -102,7 +102,7 @@ export default function Footer() {
               </button>
             </form>
             {/* social icons */}
-            <div className="grid grid-cols-6 md:grid-cols-6 items-center gap-x-4 md:gap-x-10 w-fit rounded-xl pb-3">
+            <div className="flex items-center justify-between rounded-xl pb-3 p-1 w-full">
               {socials.map((social) => (
                 <SocialIcon key={social.label} icon={social.icon} href={social.href} label={social.label} />
               ))}

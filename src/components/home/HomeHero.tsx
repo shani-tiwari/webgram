@@ -43,7 +43,7 @@ export default function HomeHero() {
           </span>
          <span className="absolute bottom-6 md:bottom-12 left-1/2 -translate-x-1/2 whitespace-nowrap flex items-center gap-3 rounded-xl rounded-t-4xl bg-white/50 backdrop-blur-md px-4 py-1.5 text-sm font-medium text-blue-800 outline-2 outline-offset-1 outline-blue-500/40 ">
             <span className="h-1.5 w-1.5  animate-pulse rounded-full  bg-blue-500" />
-              Trusted by 15+ Global Business Owners . 
+              Trusted by 15+ Business Owners . 
           </span>
 
         <div className="flex flex-col items-center py-6 gap-6 text-center md:flex-row ">

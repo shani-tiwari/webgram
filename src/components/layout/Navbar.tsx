@@ -81,6 +81,7 @@ export default function Navbar() {
         </button>
       </nav>
 
+      {/* mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -88,7 +89,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="overflow-hidden border-b border-border/70 bg-white/95 md:hidden"
+            className="overflow-hidden border-b border-border/70 bg-white/20 backdrop-blur-lg md:hidden"
           >
             <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 sm:px-6">
               {navLinks.map((link) => {
@@ -105,7 +106,7 @@ export default function Navbar() {
                     className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
                       isActive
                         ? "text-accent"
-                        : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                        : "text-foreground hover:bg-muted hover:text-accent"
                     }`}
                   >
                     {link.label}

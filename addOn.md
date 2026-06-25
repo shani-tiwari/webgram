@@ -5,6 +5,12 @@
 - arrow svg infinite moving animation
 - interface/illustration
 - Affiliate program
+- badges (✓ Delivered Ready To Go
+✓ Mobile Responsive
+✓ Basic SEO Included
+✓ 15 Days Support
+✓ Live Demo Available
+✓ Business Content Setup Included)
 
 
 left over
