@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "motion/react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   CheckmarkCircle02Icon,
@@ -9,9 +10,11 @@ import {
   Clock01Icon,
   CodeIcon,
   Eye,
+  Cancel01Icon,
 } from "@hugeicons/core-free-icons";
 import Image from "next/image";
 import TemplateGrid from "./TemplateGrid";
+import ContactForm from "@/components/contact/ContactForm";
 
 interface TemplateData {
   id: number;
@@ -56,6 +59,19 @@ function TemplateHeroPreview({data}: {data: TemplateData}) {
 };
 
 export default function TemplateInfo({ data }: { data: TemplateData }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isModalOpen]);
+
   return (
     <div className="mx-auto max-w-6xl px-1 sm:px-2">
       <motion.nav
@@ -117,13 +133,13 @@ export default function TemplateInfo({ data }: { data: TemplateData }) {
               Live Preview
               <HugeiconsIcon icon={Eye} size={18} />
             </Link>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 rounded-xl rounded-t-4xl outline-2 outline-offset-1 outline-black/20 bg-accent px-6 py-3 font-semibold text-white transition-colors duration-200 hover:bg-accent-hover"
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="inline-flex items-center justify-center gap-2 rounded-xl rounded-t-4xl outline-2 outline-offset-1 outline-black/20 bg-accent px-6 py-3 font-semibold text-white transition-colors duration-200 hover:bg-accent-hover cursor-pointer"
             >
               Get This Template
               <HugeiconsIcon icon={ArrowRight01Icon} size={18} />
-            </Link>
+            </button>
 
             <div className="mt-6 mb-2 flex flex-wrap items-center gap-6">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -198,6 +214,55 @@ export default function TemplateInfo({ data }: { data: TemplateData }) {
         <h1 className="text-2xl font-thin text-foreground mb-6">More Templates</h1>
         <TemplateGrid flag={true}/>
       </div>
+
+      <AnimatePresence>
+        {isModalOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center ">
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsModalOpen(false)}
+              className="fixed inset-0 bg-black/60 backdrop-blur-md"
+            />
+
+            {/* Modal Container */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 10 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="relative z-10 w-full max-w-lg rounded-3xl border border-border bg-white p-4 shadow-2xl sm:p-6 overflow-y-auto max-h-[90vh] scrollbar-none"
+            >
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="absolute right-3 top-3 rounded-xl p-2 text-muted-foreground hover:bg-muted hover:text-foreground transition-colors cursor-pointer"
+                aria-label="Close modal"
+              >
+                <HugeiconsIcon icon={Cancel01Icon} size={20} />
+              </button>
+
+              <div className="mb-6 flex flex-col gap-1.5 pr-8">
+                <span className="text-[8px] font-bold uppercase tracking-wider text-accent bg-accent-light px-2.5 py-1 rounded-md w-fit">
+                  Template Request
+                </span>
+                <h2 className="text-2xl font-bold tracking-tight text-foreground">
+                  Get {data.name}
+                </h2>
+                {/* <p className="text-xs leading-relaxed text-muted-foreground">
+                  Provide your details and we will help you get started with the {data.name} template (Price: {data.price}).
+                </p> */}
+              </div>
+
+              <ContactForm
+                initialMessage={`I'm interested in getting the "${data.name}" template (Price: ${data.price}). Please let me know how to proceed.`}
+                onSuccess={() => setIsModalOpen(false)}
+              />
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

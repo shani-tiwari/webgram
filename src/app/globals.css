@@ -54,3 +54,11 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #9ca3af;
 }
+button:active{
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+button:hover{
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}

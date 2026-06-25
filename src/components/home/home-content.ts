@@ -33,7 +33,7 @@ export const homeSteps: HomeStep[] = [
   },
   {
     num: "03",
-    title: "Go Live",
+    title: "Website Live",
     desc: "Your fully responsive, SEO-optimized website goes live within 1-2 days. It's that simple.",
   },
 ];

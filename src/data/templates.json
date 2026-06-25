@@ -98,7 +98,7 @@
     "price": "₹2,499",
     "deliveryDays": 2,
     "pages": ["Home", "Services", "FAQ", "Team", "Contact"],
-    "images": ["/agency-1/main.png", "/agency-1/case.png","/agency-1/study.png"],
+    "images": ["/agency-1/main.png", "/agency-1/brand.png","/agency-1/study.png"],
     "link": "https://agency-c.vercel.app/"
 
   }
