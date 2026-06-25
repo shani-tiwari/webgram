@@ -15,6 +15,7 @@ import {
 import Image from "next/image";
 import TemplateGrid from "./TemplateGrid";
 import ContactForm from "@/components/contact/ContactForm";
+import TemplateDetailsSections from "./TemplateDetailsSections";
 
 interface TemplateData {
   id: number;
@@ -210,6 +211,9 @@ export default function TemplateInfo({ data }: { data: TemplateData }) {
           </div>
         </motion.div>
       </div>
+
+      <TemplateDetailsSections />
+
       <div className="py-10">
         <h1 className="text-2xl font-thin text-foreground mb-6">More Templates</h1>
         <TemplateGrid flag={true}/>
