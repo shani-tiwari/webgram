@@ -11,12 +11,12 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
-  title: "WebGram — Code-Ready Website Templates | Go Live in 1 - 2 Days",
+  title: "WebGram — Ready-made Website Templates | Go Live in 1 - 2 Days",
   description:
-    "Browse premium, responsive, SEO-optimized Next.js + Tailwind CSS website templates. Pick a design, personalize it for your brand, and launch in 1–2 days.",
+    "Browse premium, responsive, SEO-optimized website templates. Pick a design, personalize it for your brand, and launch in 1–2 days.",
   keywords: [
     "website templates",
-    "Next.js templates",
+    "ready-made website templates",
     "Tailwind CSS",
     "responsive websites",
     "SEO optimized",
@@ -32,24 +32,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-    title: "WebGram — Code-Ready Website Templates | Go Live in 1 - 2 Days",
+    title: "WebGram — Ready-made Website Templates | Go Live in 1 - 2 Days",
     description:
-      "Browse premium, responsive, SEO-optimized Next.js + Tailwind CSS website templates. Pick a design, personalize it for your brand, and launch in 1–2 days.",
+      "Browse premium, responsive, SEO-optimized website templates. Pick a design, personalize it for your brand, and launch in 1–2 days.",
     siteName: "WebGram",
     images: [
       {
         url: "/preview.png",
         width: 1200,
         height: 630,
-        alt: "WebGram — Premium Next.js & Tailwind CSS Website Templates",
+        alt: "WebGram — Premium Ready-made Website Templates",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "WebGram — Code-Ready Website Templates | Go Live in 1 - 2 Days",
+    title: "WebGram — Ready-made Website Templates | Go Live in 1 - 2 Days",
     description:
-      "Browse premium, responsive, SEO-optimized Next.js + Tailwind CSS website templates. Pick a design, personalize it for your brand, and launch in 1–2 days.",
+      "Browse premium, responsive, SEO-optimized website templates. Pick a design, personalize it for your brand, and launch in 1–2 days.",
     images: ["/preview.png"],
     creator: "@webgram",
   },

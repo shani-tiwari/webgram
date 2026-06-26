@@ -74,7 +74,7 @@ export default function TemplateInfo({ data }: { data: TemplateData }) {
   }, [isModalOpen]);
 
   return (
-    <div className="mx-auto max-w-6xl px-1 sm:px-2">
+    <div className="mx-auto max-w-6xl px-2">
       <motion.nav
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

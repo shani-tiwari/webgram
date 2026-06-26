@@ -110,7 +110,7 @@ export default function TemplateDetailsSections() {
               className="group relative flex flex-col rounded-2xl outline-2 outline-offset-1 outline-black/10 bg-linear-to-b from-white to-slate-50/50 p-5 pt-7 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
             >
 
-              <span className="absolute top-3 right-3 text-2xl font-bold text-accent-light group-hover:text-accent transition-colors duration-300 select-none animate-pulse">
+              <span className="absolute top-3 right-3 text-2xl font-bold text-accent group-hover:text-accent transition-colors duration-300 select-none animate-pulse">
                 {step.number}
               </span>
 

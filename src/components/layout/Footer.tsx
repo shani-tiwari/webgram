@@ -4,9 +4,9 @@ import {
   InstagramIcon,
   NewTwitterIcon,
   Linkedin01Icon,
-  Github01Icon,
+  // Github01Icon,
   Email,
-  Dribbble,
+  // Dribbble,
 } from "@hugeicons/core-free-icons";
 
 const footerLinks = {

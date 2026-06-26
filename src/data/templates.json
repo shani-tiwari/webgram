@@ -63,9 +63,9 @@
     "id": 3,
     "slug": "yoga",
     "name": "FlexiZen",
-    "category": ["Yoga", "Fitness", "Health", "Personal Portfolio"],
+    "category": ["Yoga Center", "Gym", "Personal Portfolio"],
     "tagline": "A modern Yoga template",
-    "description": "A minimal, elegant  template for designers, developers, and creative agencies. Features smooth page transitions, project case studies with detailed layouts, a filterable work grid, and a blog for thought leadership.",
+    "description": "A minimal, elegant  template for yoga trainers, gyms,and wellness centres. Features smooth page transitions, project case studies with detailed layouts, a filterable work grid, and a blog for thought leadership.",
     "features": [
       "Filterable project grid",
       "Detailed case study pages",
